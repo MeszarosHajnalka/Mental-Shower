@@ -1,0 +1,48 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row id="color-block-top" class="padding-top-50">
+        <ion-col>
+            <strong>Welcome Back!</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row id="color-block-bottom">
+        <ion-col>
+          <img src="assets/undraw_Weather_app_re_kcb1 1.svg"/>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <ion-label>Your ID</ion-label>
+          <ion-input placeholder="Enter your ID here" type="text"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-12">
+        <ion-col>  
+          <ion-label>Password</ion-label>
+          <ion-input placeholder="Enter your password here" type="password"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-12 text-right">
+        <ion-col>
+          <a href="forget-password">Forgot Password ?</a>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col  size="10">
+          <ion-button href="how-do-you-feel" expand="block">Sign In</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <img id="finger-print" src="assets/fingerprint.svg"/>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col size="8">Don't have an account?</ion-col>
+        <ion-col>
+          <a id="create-account" href="create-account">create one!</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

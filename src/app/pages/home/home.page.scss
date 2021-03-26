@@ -1,0 +1,17 @@
+ion-content {
+  --ion-background-color: #72D3D9;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+#container strong {
+  font-size: 40px;
+  color: #fff;
+}
+#container p {
+  color: #fff;
+}
