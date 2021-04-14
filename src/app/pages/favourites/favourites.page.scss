@@ -1,0 +1,17 @@
+.padding-top-50 {
+  text-align: left;
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+ion-icon {
+  color: white;
+}
+
+ion-button {
+  --background-activated: green;
+}

@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'verify-code',
     loadChildren: () => import('./pages/verify-code/verify-code.module').then( m => m.VerifyCodePageModule)
   },
+  {
+    path: 'favourites',
+    loadChildren: () => import('./pages/favourites/favourites.module').then( m => m.FavouritesPageModule)
+  }
 ];
 
 @NgModule({

@@ -1,14 +1,26 @@
 strong {
-    color: #000000;
+  color: #000000;
+}
+
+p {
+  color: #000000;
+}
+
+.padding-top-50 {
+  text-align: left;
+}
+
+.padding-top-18 {
+  text-align: left;
 }
 
 ion-button {
-    --background: #EDEDED;
-    --border-radius: 20px;
+  --background: rgba(114, 211, 217, 0.1);
+  --border-radius: 20px;
 
-    height: 200px;
+  height: 200px;
 }
 
 img {
-    width: 140px;
+  width: 100px;
 }
