@@ -5,38 +5,24 @@
     </ion-col>
   </ion-row >
   <ion-grid>
-    <ion-row class="padding-top-50">
+    <div *ngIf="preferences.length > 0; else noData">
+      <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">
       <ion-col>
         <ion-card>
           <ion-item>
             <ion-button color="success" fill="outline" slot="start">Select</ion-button>
-            <ion-label>Rainy day</ion-label>
-            <ion-button fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            <ion-label>{{preference.name}}</ion-label>
+            <ion-button (click)="deletePreference(preference.id)" fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
           </ion-item>
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row class="padding-top-20">
-      <ion-col>
-        <ion-card>
-          <ion-item>
-            <ion-button color="success" fill="outline" slot="start">Select</ion-button>
-            <ion-label>Chilly day</ion-label>
-            <ion-button fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
-          </ion-item>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row class="padding-top-20">
-      <ion-col>
-        <ion-card>
-          <ion-item>
-            <ion-button color="success" fill="outline" slot="start">Select</ion-button>
-            <ion-label>Sunny day</ion-label>
-            <ion-button fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
-          </ion-item>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+    </div>
+    <ng-template #noData>
+      <div class="noDataDiv">
+        <img class="img" src="assets/pullp_fiction_meme.gif" alt="No preferences" />
+        <ion-label>No data</ion-label>
+      </div>
+    </ng-template>
   </ion-grid>
 </ion-content> 

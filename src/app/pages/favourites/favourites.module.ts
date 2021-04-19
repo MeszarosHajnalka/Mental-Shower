@@ -13,9 +13,9 @@ import { FavouritesPage } from './favourites.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    FavouritesPageRoutingModule
+    FavouritesPageRoutingModule,
+    CommonModule,
   ],
-  declarations: [FavouritesPage]
+  declarations: [FavouritesPage],
 })
-
 export class FavouritesPageModule {}

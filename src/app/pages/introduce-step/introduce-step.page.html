@@ -14,14 +14,15 @@
       </ion-row>
       <ion-row class="padding-top-25">
         <ion-col>
-          <ion-button href="create-account" expand="block">Create Account</ion-button>
+          <ion-button [routerLink]="['/create-account']" expand="block">Create Account</ion-button>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-12">
         <ion-col>
-          <ion-button href="sign-in" expand="block" class="secondary-button">Sign In</ion-button>
+          <ion-button [routerLink]="['/sign-in']" expand="block" class="secondary-button">Sign In</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
+  
 </ion-content>

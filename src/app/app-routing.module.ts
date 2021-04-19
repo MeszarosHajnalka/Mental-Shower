@@ -54,7 +54,15 @@ const routes: Routes = [
   {
     path: 'favourites',
     loadChildren: () => import('./pages/favourites/favourites.module').then( m => m.FavouritesPageModule)
-  }
+  },
+  {
+    path: 'waiting',
+    loadChildren: () => import('./pages/waiting/waiting.module').then( m => m.WaitingPageModule)
+  },
+  {
+    path: 'board',
+    loadChildren: () => import('./pages/board/board.module').then( m => m.BoardPageModule)
+  },
 ];
 
 @NgModule({

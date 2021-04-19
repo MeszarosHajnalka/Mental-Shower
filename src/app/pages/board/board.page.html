@@ -1,0 +1,32 @@
+
+<ion-content>
+  <div id="container">
+    <ion-grid>
+      <ion-row class="padding-top-25"></ion-row>
+      <ion-row class="padding-top-25"></ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col>
+          <img src="assets/Hotovo.png"/>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <strong>It is done!</strong>
+          <p>Do you like this set up? You can save it to your favorites!</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-16">
+        <ion-col>
+          <!-- <ion-label><small>Name of favorite</small></ion-label> -->
+          <ion-input placeholder="Enter name of set up" type="name"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/favourites']" expand="block">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+

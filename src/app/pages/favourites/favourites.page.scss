@@ -5,13 +5,41 @@
 ion-card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 110%;
+  justify-content: center;
+  color: aqua;
+  left: -25px;
 }
 
 ion-icon {
+  display: flex;
   color: white;
+  align-items: center;
 }
 
 ion-button {
   --background-activated: green;
+}
+
+img {
+  position: absolute;
+  height: 200px;
+  width: 150px;
+  left: 65px;
+  top: 45px;
+}
+
+ion-col {
+  font-size: 24px;
+}
+
+.noDataDiv {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.img {
+  margin-left: 70px;
 }

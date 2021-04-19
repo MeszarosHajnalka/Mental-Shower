@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Constants } from '../../util/constants';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,10 +10,62 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-in.page.scss'],
 })
 export class SignInPage implements OnInit {
+  username: String;
+  password: String;
 
-  constructor() { }
+  constructor(private alertController:AlertController, private httpClient: HttpClient, private router: Router) {}
 
-  ngOnInit() {
+  loginUser() {
+
+    if(!this.username || !this.password){
+      this.presentNotification(
+        'Oops',
+        'You must enter your username and password...',
+        ['Got it']
+      );
+      return
+    }
+
+    this.httpClient
+      .post(
+        Constants.DOMAIN + 'user/login',
+        {
+          username: this.username,
+          password: this.password,
+        },
+        { observe: 'response' }
+      )
+      .subscribe(
+        (resp) => {
+          if (resp.status == 200 || resp.status == 204) {
+            this.router.navigate(['/how-do-you-feel']);
+          }
+        },
+        (err) => {
+          this.presentNotification(
+            'Oops',
+            'Your password or username is incorrect... Try again.',
+            ['Got it']
+          )
+        }
+      );
   }
 
+  async presentNotification(
+    header: string,
+    message: string,
+    buttons: string[]
+  ) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: buttons,
+    });
+
+    await alert.present();
+    let result = await alert.onDidDismiss();
+    console.log(result);
+  }
+
+  ngOnInit() {}
 }

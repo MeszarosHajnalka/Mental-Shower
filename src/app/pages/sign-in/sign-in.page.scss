@@ -1,22 +1,42 @@
 #container strong {
-    color: white;
+  color: white;
 }
 
 img {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
 }
 
 a {
-    color: #999999;
+  color: #72d3d9;
 }
 
 #create-account {
-    color: #72D3D9;
-    text-decoration: underline;
+  color: #72d3d9;
+  text-decoration: underline;
+  font-size: small;
+  text-align: center;
+}
+
+.forget-password {
+  // text-align: end !important;
+  // font-size: small;
+
+  display: flex i !important;
+  flex-direction: row-reverse !important;
+  padding-top: 10px;
+}
+
+.create-account{
+  display: block;
+  padding-top: 10px;
 }
 
 #finger-print {
-    height: 42px;
-    width: 40px;
+  height: 42px;
+  width: 40px;
+}
+
+ion-text-center {
+  text-align: center;
 }

@@ -8,26 +8,26 @@
       </ion-row>
       <ion-row class="padding-top-50">
         <ion-col>
-          <ion-label><small>Create Your ID</small></ion-label>
-          <ion-input placeholder="Enter your new ID here" type="text"></ion-input>
+          <ion-label><small>Username</small></ion-label>
+          <ion-input [(ngModel)]="username" placeholder="Enter your new username here" type="text" required></ion-input>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-25">
         <ion-col>
           <ion-label><small>Create password</small></ion-label>
-          <ion-input placeholder="Enter new password here" type="password"></ion-input>
+          <ion-input [(ngModel)]="password" placeholder="Enter new password here" type="password" required></ion-input>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-25">
         <ion-col>
           <ion-label><small>Repeat password</small></ion-label>
-          <ion-input placeholder="Enter new password again" type="password"></ion-input>
+          <ion-input [(ngModel)]="password_confirm" placeholder="Enter new password again" type="password" required></ion-input>
         </ion-col>
       </ion-row>
       
       <ion-row class="padding-top-50">
         <ion-col>
-          <ion-button href="sign-in" expand="block">Create</ion-button>
+          <ion-button (click)="createUser()" expand="block">Create</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

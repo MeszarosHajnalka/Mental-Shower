@@ -11,5 +11,4 @@ export class ForgetPasswordPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
