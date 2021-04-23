@@ -56,14 +56,14 @@ export class FavouritesPage implements OnInit {
         preference,
       },
     };
-    this.router.navigate(['fan-speed'], navigationData);
+    this.router.navigate(['fan-speed-update'], navigationData);
   }
 
   async selectPreference(preference) {
     const alert = await this.alertController.create({
       header: 'Success',
       message: 'Favourite selected',
-      buttons: ['Thanks bro'],
+      buttons: ['Okay, got it!'],
     });
 
     await alert.present();

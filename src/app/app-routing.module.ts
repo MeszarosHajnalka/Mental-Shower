@@ -44,6 +44,14 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'fan-speed-update',
+    loadChildren: () =>
+      import('./pages/fan-speed-update/fan-speed-update.module').then(
+        (m) => m.FanSpeedUpdatePageModule
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'forget-password',
     loadChildren: () =>
       import('./pages/forget-password/forget-password.module').then(

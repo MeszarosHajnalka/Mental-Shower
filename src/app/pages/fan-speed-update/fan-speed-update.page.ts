@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { Constants } from '../../util/constants';
 
 @Component({
-  selector: 'app-fan-speed',
-  templateUrl: './fan-speed.page.html',
-  styleUrls: ['./fan-speed.page.scss'],
+  selector: 'app-fan-speed-update',
+  templateUrl: './fan-speed-update.page.html',
+  styleUrls: ['./fan-speed-update.page.scss'],
 })
-export class FanSpeedPage implements OnInit {
+export class FanSpeedUpdatePage implements OnInit {
   humidity: Number = 50;
   temperature: Number = 50;
   airspeed: Number = 50;
@@ -21,27 +21,25 @@ export class FanSpeedPage implements OnInit {
     private route: ActivatedRoute,
     private httpClient: HttpClient,
     private router: Router
-  ) 
-  {
-    // try {
-    //   console.log(this.router.getCurrentNavigation().extras.state.preference);
-    //   this.route.queryParams.subscribe((params) => {
-    //     if (this.router.getCurrentNavigation().extras.state.preference) {
-    //       let preference = this.router.getCurrentNavigation().extras.state
-    //         .preference;
-    //       if (preference) {
-    //         this.isUpdate = true;
-    //         this.humidity = preference.humidity;
-    //         this.temperature = preference.temperature;
-    //         this.airspeed = preference.airspeed;
-    //         this.preferenceToUpdate = preference;
-    //       }
-    //     }
-    //   });
-    // } catch (err) {
-    //   console.log(err);
-    //   //TODO: handle
-    // }
+  ) {
+    try {
+      console.log(this.router.getCurrentNavigation().extras.state.preference);
+      this.route.queryParams.subscribe((params) => {
+        if (this.router.getCurrentNavigation().extras.state.preference) {
+          let preference = this.router.getCurrentNavigation().extras.state
+            .preference;
+          if (preference) {
+            this.isUpdate = true;
+            this.humidity = preference.humidity;
+            this.temperature = preference.temperature;
+            this.airspeed = preference.airspeed;
+            this.preferenceToUpdate = preference;
+          }
+        }
+      });
+    } catch (err) {
+      //TODO: handle
+    }
   }
 
   ngOnInit() {}
