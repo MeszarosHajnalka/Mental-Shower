@@ -13,17 +13,20 @@ export class SignInPage implements OnInit {
   username: String;
   password: String;
 
-  constructor(private alertController:AlertController, private httpClient: HttpClient, private router: Router) {}
+  constructor(
+    private alertController: AlertController,
+    private httpClient: HttpClient,
+    private router: Router
+  ) {}
 
   loginUser() {
-
-    if(!this.username || !this.password){
+    if (!this.username || !this.password) {
       this.presentNotification(
         'Oops',
         'You must enter your username and password...',
         ['Got it']
       );
-      return
+      return;
     }
 
     this.httpClient
@@ -38,15 +41,17 @@ export class SignInPage implements OnInit {
       .subscribe(
         (resp) => {
           if (resp.status == 200 || resp.status == 204) {
+            localStorage.setItem('currentUserToken', resp.body['token']);
             this.router.navigate(['/how-do-you-feel']);
           }
         },
         (err) => {
+          console.log(err);
           this.presentNotification(
             'Oops',
             'Your password or username is incorrect... Try again.',
             ['Got it']
-          )
+          );
         }
       );
   }
@@ -64,7 +69,6 @@ export class SignInPage implements OnInit {
 
     await alert.present();
     let result = await alert.onDidDismiss();
-    console.log(result);
   }
 
   ngOnInit() {}

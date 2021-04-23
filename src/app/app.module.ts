@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { AuthGuard } from './auth.guard';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { JwtService } from './util/jwtService';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService,
+    JwtService,
+    AuthGuard,
     HttpClient,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],

@@ -67,10 +67,10 @@ export class CreateAccountPage implements OnInit {
   async handleCreation() {
     await this.presentNotification(
       'Success',
-      "Your account has been created. You'll be logged in.",
+      'Your account has been created. Now you can log in.',
       ["Let's go"]
     );
-    this.router.navigate(['/how-do-you-feel']);
+    this.router.navigate(['/sign-in']);
   }
 
   async handlerFailuer() {}

@@ -9,10 +9,10 @@
       <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">
       <ion-col>
         <ion-card>
-          <ion-item>
-            <ion-button color="success" fill="outline" slot="start">Select</ion-button>
+          <ion-item (click)="selectPreference(preference)">
+            <ion-button (click)="editPreference($event, preference)" color="success" fill="outline" slot="start">Edit</ion-button>
             <ion-label>{{preference.name}}</ion-label>
-            <ion-button (click)="deletePreference(preference.id)" fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            <ion-button (click)="deletePreference($event, preference.id)" fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
           </ion-item>
         </ion-card>
       </ion-col>
@@ -20,7 +20,7 @@
     </div>
     <ng-template #noData>
       <div class="noDataDiv">
-        <img class="img" src="assets/pullp_fiction_meme.gif" alt="No preferences" />
+        <img class="img" src="assets/favourites.svg" alt="No preferences" />
         <ion-label>No data</ion-label>
       </div>
     </ng-template>

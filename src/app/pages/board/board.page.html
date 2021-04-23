@@ -18,13 +18,16 @@
       <ion-row class="padding-top-16">
         <ion-col>
           <!-- <ion-label><small>Name of favorite</small></ion-label> -->
-          <ion-input placeholder="Enter name of set up" type="name"></ion-input>
+          <ion-input [(ngModel)]="preferenceName" placeholder="Enter name of set up" type="name"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-25">
         <ion-col>
-          <ion-button [routerLink]="['/favourites']" expand="block">Save</ion-button>
+          <ion-button (click)="savePreference()" expand="block">Save</ion-button>
         </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-25">
+        <ion-col><a id="no-thanks" [routerLink]="['/home']">No, thanks!</a></ion-col>
       </ion-row>
     </ion-grid>
   </div>

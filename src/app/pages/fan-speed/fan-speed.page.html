@@ -11,9 +11,9 @@
           <ion-col>
             <small>Temperature</small>
         </ion-col>
-          <ion-range color="success" value="50">
-            <ion-label slot="start">too cold</ion-label>
-            <ion-label slot="end">too hot</ion-label>
+          <ion-range [(ngModel)]="temperature" color="success" value="50">
+            <ion-label slot="start">cold</ion-label>
+            <ion-label slot="end">hot</ion-label>
           </ion-range>
         </ion-col>
       </ion-row>
@@ -22,9 +22,9 @@
     </ion-col>
       <ion-row class="padding-top-12">
         <ion-col>
-          <ion-range color="primary" value="50">
-            <ion-label slot="start">too dry</ion-label>
-            <ion-label slot="end">too humid</ion-label>
+          <ion-range [(ngModel)]="humidity" color="primary" value="50">
+            <ion-label slot="start">dry</ion-label>
+            <ion-label slot="end">humid</ion-label>
           </ion-range>
         </ion-col>
       </ion-row>
@@ -33,16 +33,16 @@
     </ion-col>
       <ion-row class="padding-top-12">
         <ion-col>
-          <ion-range color="danger" value="50">
-            <ion-label slot="start">too fast</ion-label>
-            <ion-label slot="end">too slow</ion-label>
+          <ion-range [(ngModel)]="airspeed" color="danger" value="50">
+            <ion-label slot="start">fast</ion-label>
+            <ion-label slot="end">slow</ion-label>
           </ion-range>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-50">
         <ion-col>
-          <ion-button [routerLink]="['/board']" expand="block">
-            Confirm
+          <ion-button (click)="confirmSelection()"  expand="block">
+            {{isUpdate ? "Update" : "Confirm"}}
           </ion-button>
         </ion-col>
       </ion-row>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Constants } from '../../util/constants';
+import { Router, NavigationExtras } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { JwtService } from '../../util/jwtService';
 
 @Component({
   selector: 'app-favourites',
@@ -8,19 +11,32 @@ import { Constants } from '../../util/constants';
   styleUrls: ['./favourites.page.scss'],
 })
 export class FavouritesPage implements OnInit {
-  constructor(private httpClient: HttpClient) {
+  constructor(
+    private jwtService: JwtService,
+    private alertController: AlertController,
+    private httpClient: HttpClient,
+    private router: Router
+  ) {
     this.fetchPreferences();
   }
 
   preferences: any = [];
 
   fetchPreferences() {
-    this.httpClient.get(Constants.DOMAIN + 'preference').subscribe((data) => {
-      this.preferences = data;
-    });
+    const token = this.jwtService.getDecodedAccessToken(
+      localStorage.getItem('currentUserToken')
+    );
+
+    this.httpClient
+      .get(Constants.DOMAIN + `preference/${token['id']}`)
+      .subscribe((data) => {
+        this.preferences = data;
+      });
   }
 
-  deletePreference(preferenceId) {
+  deletePreference(e: Event, preferenceId) {
+    e.stopPropagation();
+
     this.httpClient
       .delete(Constants.DOMAIN + `preference/${preferenceId}`, {
         observe: 'response',
@@ -31,6 +47,27 @@ export class FavouritesPage implements OnInit {
           //TODO: Invoke alert to notiy failure
         }
       });
+  }
+
+  editPreference(e: Event, preference) {
+    e.stopPropagation();
+    let navigationData: NavigationExtras = {
+      state: {
+        preference,
+      },
+    };
+    this.router.navigate(['fan-speed'], navigationData);
+  }
+
+  async selectPreference(preference) {
+    const alert = await this.alertController.create({
+      header: 'Success',
+      message: 'Favourite selected',
+      buttons: ['Thanks bro'],
+    });
+
+    await alert.present();
+    let result = await alert.onDidDismiss();
   }
   ngOnInit() {}
 }
