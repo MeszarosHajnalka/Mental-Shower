@@ -4,7 +4,7 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build --prod --aot",
     "compodoc": "npx compodoc -p tsconfig.json src",
     "ng": "ng",
     "start": "node server.js",
