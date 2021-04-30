@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HowDoYouFeelPageRoutingModule } from './how-do-you-feel-routing.module';
 
 import { HowDoYouFeelPage } from './how-do-you-feel.page';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { HowDoYouFeelPage } from './how-do-you-feel.page';
     IonicModule,
     HowDoYouFeelPageRoutingModule
   ],
-  declarations: [HowDoYouFeelPage]
+  declarations: [HowDoYouFeelPage,DashboardComponent]
 })
 export class HowDoYouFeelPageModule {}

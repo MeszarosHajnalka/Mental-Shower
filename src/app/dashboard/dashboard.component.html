@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row class="padding-top-50">
+        <ion-col>
+            <p>Hey, how are you feeling today?</p>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="padding-side-25 padding-top-20">
+        <ion-col>
+          <ion-button class="ion-button-small" [routerLink]="['/favourites']" expand="block">
+            <div> 
+              <span><ion-label>Good</ion-label></span><br>
+              <img  class="img-icon"src="assets/checkmark-circle-outline.svg"/>
+            </div>
+          
+           
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="ion-button-small" [routerLink]="['/favourites']" expand="block">
+            <div> 
+              <span><ion-label>Cold</ion-label></span><br>
+              <img  class="img-icon"src="assets/snow-outline.svg"/>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="ion-button-small" [routerLink]="['/favourites']" expand="block">
+            <div> 
+              <span><ion-label>Warm</ion-label></span><br>
+              <img  class="img-icon"src="assets/sun-outline.svg"/>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="ion-button-small" [routerLink]="['/favourites']" expand="block">
+            <div> 
+              <span><ion-label>Bad</ion-label></span><br>
+              <img  class="img-icon"src="assets/person-delete-outline.svg"/>
+            </div>
+            
+            
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-35">
+        <ion-col>
+            <p>Are you looking for something else?</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-20">
+        <ion-col>
+          <ion-button class="ion-button" [routerLink]="['/fan-speed']" expand="block">
+            <p>New setting</p>
+            <img src="assets/undraw_feeling_happy_jymo 1.svg"/>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-10">
+        <ion-col>
+          <ion-button class="ion-button"[routerLink]="['/fan-speed']" expand="block">
+            <div> 
+              <span><p>Breathing exercise</p></span><br>
+              <img src="assets/undraw_Floating_re_xtcj.svg"/>
+            </div>
+            
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="ion-button" [routerLink]="['/fan-speed']" expand="block">
+            <div> 
+              <span><img src="assets/undraw_Settings.svg"/></span><br>
+              
+              <p>Favourite settings</p>
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
