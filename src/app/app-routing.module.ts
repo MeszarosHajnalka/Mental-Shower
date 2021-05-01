@@ -112,6 +112,10 @@ const routes: Routes = [
       import('./pages/board/board.module').then((m) => m.BoardPageModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'breathe',
+    loadChildren: () => import('./pages/breathe/breathe.module').then( m => m.BreathePageModule)
+  },
 ];
 
 @NgModule({

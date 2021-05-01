@@ -12,6 +12,7 @@ import { AlertController } from '@ionic/angular';
 export class SignInPage implements OnInit {
   username: String;
   password: String;
+  loading: boolean;
 
   constructor(
     private alertController: AlertController,
@@ -20,6 +21,7 @@ export class SignInPage implements OnInit {
   ) {}
 
   loginUser() {
+    this.loading = true;
     if (!this.username || !this.password) {
       this.presentNotification(
         'Oops',
@@ -28,7 +30,6 @@ export class SignInPage implements OnInit {
       );
       return;
     }
-
     this.httpClient
       .post(
         Constants.DOMAIN + 'user/login',
@@ -40,6 +41,7 @@ export class SignInPage implements OnInit {
       )
       .subscribe(
         (resp) => {
+          this.loading = false;
           if (resp.status == 200 || resp.status == 204) {
             localStorage.setItem('currentUserToken', resp.body['token']);
             this.router.navigate(['/how-do-you-feel']);
@@ -54,6 +56,7 @@ export class SignInPage implements OnInit {
           );
         }
       );
+    
   }
 
   async presentNotification(
