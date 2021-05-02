@@ -12,6 +12,7 @@ export class FanSpeedUpdatePage implements OnInit {
   humidity: Number = 50;
   temperature: Number = 50;
   airspeed: Number = 50;
+  loading: Boolean;
 
   isUpdate: boolean = false;
 
@@ -45,6 +46,7 @@ export class FanSpeedUpdatePage implements OnInit {
   ngOnInit() {}
 
   confirmSelection() {
+    this.loading = true;
     console.log(this.humidity, this.temperature, this.airspeed);
 
     if (!this.validateSliderData()) return;
@@ -72,7 +74,7 @@ export class FanSpeedUpdatePage implements OnInit {
             console.log(err);
           }
         );
-
+        this.loading = false;
       return;
     }
 

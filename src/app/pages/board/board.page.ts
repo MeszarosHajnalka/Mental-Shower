@@ -12,6 +12,7 @@ import { JwtService } from '../../util/jwtService';
 export class BoardPage implements OnInit {
   preferenceData: any;
   preferenceName: string;
+  loading: Boolean;
 
   constructor(
     private jwtService: JwtService,
@@ -25,6 +26,7 @@ export class BoardPage implements OnInit {
   }
 
   savePreference() {
+    this.loading = true;
     console.log('pref');
     if (!this.validateData()) return;
 
@@ -54,6 +56,8 @@ export class BoardPage implements OnInit {
           console.log('error', err);
         }
       );
+
+      this.loading = false;
   }
 
   validateData() {

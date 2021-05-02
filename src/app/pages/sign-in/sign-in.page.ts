@@ -49,6 +49,7 @@ export class SignInPage implements OnInit {
         },
         (err) => {
           console.log(err);
+          //this.loading = false;
           this.presentNotification(
             'Oops',
             'Your password or username is incorrect... Try again.',
@@ -56,7 +57,6 @@ export class SignInPage implements OnInit {
           );
         }
       );
-    
   }
 
   async presentNotification(
@@ -71,6 +71,7 @@ export class SignInPage implements OnInit {
     });
 
     await alert.present();
+    this.loading = false;
     let result = await alert.onDidDismiss();
   }
 

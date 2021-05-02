@@ -23,7 +23,10 @@
       </ion-row>
       <ion-row class="padding-top-25">
         <ion-col>
-          <ion-button (click)="savePreference()" expand="block">Save</ion-button>
+          <ion-button (click)="savePreference()" expand="block">
+            <div *ngIf="!loading; else displaySpinner">Save</div>
+            <ng-template #displaySpinner><ion-spinner></ion-spinner></ng-template>
+          </ion-button>
         </ion-col>
       </ion-row>
       <ion-row class="padding-top-25">

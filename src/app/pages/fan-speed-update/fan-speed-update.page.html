@@ -42,7 +42,8 @@
       <ion-row class="padding-top-50">
         <ion-col>
           <ion-button (click)="confirmSelection()"  expand="block">
-          Update
+            <div *ngIf="!loading; else displaySpinner">Update</div>
+            <ng-template #displaySpinner><ion-spinner></ion-spinner></ng-template>
           </ion-button>
         </ion-col>
       </ion-row>
