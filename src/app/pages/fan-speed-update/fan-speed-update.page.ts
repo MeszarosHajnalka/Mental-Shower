@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Constants } from '../../util/constants';
 
@@ -24,7 +24,6 @@ export class FanSpeedUpdatePage implements OnInit {
     private router: Router
   ) {
     try {
-      console.log(this.router.getCurrentNavigation().extras.state.preference);
       this.route.queryParams.subscribe((params) => {
         if (this.router.getCurrentNavigation().extras.state.preference) {
           let preference = this.router.getCurrentNavigation().extras.state
@@ -47,8 +46,6 @@ export class FanSpeedUpdatePage implements OnInit {
 
   confirmSelection() {
     this.loading = true;
-    console.log(this.humidity, this.temperature, this.airspeed);
-
     if (!this.validateSliderData()) return;
 
     if (this.isUpdate) {
@@ -74,23 +71,8 @@ export class FanSpeedUpdatePage implements OnInit {
             console.log(err);
           }
         );
-        this.loading = false;
-      return;
+      this.loading = false;
     }
-
-    let preferenceData = {
-      humidity: this.humidity,
-      temperature: this.temperature,
-      airspeed: this.airspeed,
-    };
-
-    let navigationData: NavigationExtras = {
-      state: {
-        preferenceData,
-      },
-    };
-
-    this.router.navigate(['board'], navigationData);
   }
 
   validateSliderData() {

@@ -27,7 +27,6 @@ export class BoardPage implements OnInit {
 
   savePreference() {
     this.loading = true;
-    console.log('pref');
     if (!this.validateData()) return;
 
     const token = this.jwtService.getDecodedAccessToken(
