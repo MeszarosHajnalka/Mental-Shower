@@ -247,7 +247,7 @@ export class IsThisBetterPage implements OnInit {
       &lt;/ion-row&gt;
       &lt;ion-row class&#x3D;&quot;padding-side-25 padding-top-25&quot;&gt;
         &lt;ion-col&gt;
-          &lt;ion-button href&#x3D;&quot;enjoy-your-day&quot; expand&#x3D;&quot;block&quot;&gt;
+          &lt;ion-button [routerLink]&#x3D;&quot;[&#x27;/enjoy-your-day&#x27;]&quot; expand&#x3D;&quot;block&quot;&gt;
             &lt;strong&gt;Yes!&lt;/strong&gt;
             &lt;img src&#x3D;&quot;assets/undraw_feeling_happy_jymo 1.svg&quot;/&gt;
           &lt;/ion-button&gt;
@@ -255,7 +255,7 @@ export class IsThisBetterPage implements OnInit {
       &lt;/ion-row&gt;
       &lt;ion-row class&#x3D;&quot;padding-side-25 padding-top-25&quot;&gt;
         &lt;ion-col&gt;
-          &lt;ion-button href&#x3D;&quot;fan-speed&quot; expand&#x3D;&quot;block&quot;&gt;
+          &lt;ion-button [routerLink]&#x3D;&quot;[&#x27;/fan-speed&#x27;]&quot; expand&#x3D;&quot;block&quot;&gt;
             &lt;strong&gt;No!&lt;/strong&gt;
             &lt;img src&#x3D;&quot;assets/Smajlik.svg&quot;/&gt;
           &lt;/ion-button&gt;
@@ -271,18 +271,18 @@ export class IsThisBetterPage implements OnInit {
                     <code>./is-this-better.page.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">strong {
-    color: #000000;
+  color: #000000;
 }
 
 ion-button {
-    --background: #EDEDED;
-    --border-radius: 20px;
+  --background: rgba(114, 211, 217, 0.1);
+  --border-radius: 20px;
 
-    height: 200px;
+  height: 200px;
 }
 
 img {
-    width: 140px;
+  width: 140px;
 }
 </code></pre>
     </div>
@@ -312,8 +312,8 @@ img {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <div id="container">    <ion-grid>      <ion-row class="padding-top-50">        <ion-col>            <strong>Is this better?</strong>        </ion-col>      </ion-row>      <ion-row class="padding-side-25 padding-top-25">        <ion-col>          <ion-button href="enjoy-your-day" expand="block">            <strong>Yes!</strong>            <img src="assets/undraw_feeling_happy_jymo 1.svg"/>          </ion-button>        </ion-col>      </ion-row>      <ion-row class="padding-side-25 padding-top-25">        <ion-col>          <ion-button href="fan-speed" expand="block">            <strong>No!</strong>            <img src="assets/Smajlik.svg"/>          </ion-button>        </ion-col>      </ion-row>    </ion-grid>  </div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'}];
+        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <div id="container">    <ion-grid>      <ion-row class="padding-top-50">        <ion-col>            <strong>Is this better?</strong>        </ion-col>      </ion-row>      <ion-row class="padding-side-25 padding-top-25">        <ion-col>          <ion-button [routerLink]="[\'/enjoy-your-day\']" expand="block">            <strong>Yes!</strong>            <img src="assets/undraw_feeling_happy_jymo 1.svg"/>          </ion-button>        </ion-col>      </ion-row>      <ion-row class="padding-side-25 padding-top-25">        <ion-col>          <ion-button [routerLink]="[\'/fan-speed\']" expand="block">            <strong>No!</strong>            <img src="assets/Smajlik.svg"/>          </ion-button>        </ion-col>      </ion-row>    </ion-grid>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardPage', 'selector': 'app-board'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'FanSpeedUpdatePage', 'selector': 'app-fan-speed-update'},{'name': 'FavouritesPage', 'selector': 'app-favourites'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'},{'name': 'WaitingPage', 'selector': 'app-waiting'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'IsThisBetterPage'};
 </script>

@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/pages/home/home.page.ts</code>
+    <code>src/app/home/home.page.ts</code>
 </p>
 
 
@@ -123,7 +123,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/pages/home/home.page.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/home/home.page.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -157,29 +157,25 @@ export class HomePage {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;ion-content [fullscreen]&#x3D;&quot;true&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header [translucent]&#x3D;&quot;true&quot;&gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-title&gt;
+      Blank
+    &lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content [fullscreen]&#x3D;&quot;true&quot;&gt;
   &lt;ion-header collapse&#x3D;&quot;condense&quot;&gt;
     &lt;ion-toolbar&gt;
-      &lt;ion-title size&#x3D;&quot;large&quot;&gt;NAME&lt;/ion-title&gt;
+      &lt;ion-title size&#x3D;&quot;large&quot;&gt;Blank&lt;/ion-title&gt;
     &lt;/ion-toolbar&gt;
   &lt;/ion-header&gt;
 
-  &lt;a href&#x3D;&quot;introduce-step&quot;&gt;
-    &lt;div id&#x3D;&quot;container&quot;&gt;
-      &lt;ion-grid&gt;
-        &lt;ion-row&gt;
-          &lt;ion-col&gt;
-            &lt;strong&gt;Mental Shower&lt;/strong&gt;
-          &lt;/ion-col&gt;  
-        &lt;/ion-row&gt;
-        &lt;ion-row&gt;
-          &lt;ion-col&gt;
-            &lt;p&gt;Tap screen to start&lt;/p&gt;
-          &lt;/ion-col&gt;  
-        &lt;/ion-row&gt;
-      &lt;/ion-grid&gt;
-    &lt;/div&gt;
-  &lt;/a&gt;
+  &lt;div id&#x3D;&quot;container&quot;&gt;
+    &lt;strong&gt;Ready to create an app?&lt;/strong&gt;
+    &lt;p&gt;Start with Ionic &lt;a target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener noreferrer&quot; href&#x3D;&quot;https://ionicframework.com/docs/components&quot;&gt;UI Components&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/ion-content&gt;
 </code></pre>
     </div>
@@ -188,22 +184,32 @@ export class HomePage {
                 <p class="comment">
                     <code>home.page.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">ion-content {
-  --ion-background-color: #72D3D9;
-}
+                <pre class="line-numbers"><code class="language-scss">#container {
+  text-align: center;
 
-#container {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #container strong {
-  font-size: 40px;
-  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
 }
+
 #container p {
-  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
 }</code></pre>
     </div>
 
@@ -232,8 +238,8 @@ export class HomePage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <ion-header collapse="condense">    <ion-toolbar>      <ion-title size="large">NAME</ion-title>    </ion-toolbar>  </ion-header>  <a href="introduce-step">    <div id="container">      <ion-grid>        <ion-row>          <ion-col>            <strong>Mental Shower</strong>          </ion-col>          </ion-row>        <ion-row>          <ion-col>            <p>Tap screen to start</p>          </ion-col>          </ion-row>      </ion-grid>    </div>  </a></ion-content></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'}];
+        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true">  <ion-toolbar>    <ion-title>      Blank    </ion-title>  </ion-toolbar></ion-header><ion-content [fullscreen]="true">  <ion-header collapse="condense">    <ion-toolbar>      <ion-title size="large">Blank</ion-title>    </ion-toolbar>  </ion-header>  <div id="container">    <strong>Ready to create an app?</strong>    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardPage', 'selector': 'app-board'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'FanSpeedUpdatePage', 'selector': 'app-fan-speed-update'},{'name': 'FavouritesPage', 'selector': 'app-favourites'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'},{'name': 'WaitingPage', 'selector': 'app-waiting'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomePage'};
 </script>

@@ -72,66 +72,133 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { PreloadAllModules, RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { AuthGuard } from &#x27;./auth.guard&#x27;;
 
 const routes: Routes &#x3D; [
   {
     path: &#x27;home&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/home/home.module&#x27;).then( m &#x3D;&gt; m.HomePageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/home/home.module&#x27;).then((m) &#x3D;&gt; m.HomePageModule)&quot;,
   },
   {
     path: &#x27;&#x27;,
     redirectTo: &#x27;home&#x27;,
-    pathMatch: &#x27;full&#x27;
+    pathMatch: &#x27;full&#x27;,
   },
   {
     path: &#x27;introduce-step&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/introduce-step/introduce-step.module&#x27;).then( m &#x3D;&gt; m.IntroduceStepPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/introduce-step/introduce-step.module&#x27;).then(\
+        (m) &#x3D;&gt; m.IntroduceStepPageModule\
+      )&quot;,
   },
   {
     path: &#x27;create-account&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/create-account/create-account.module&#x27;).then( m &#x3D;&gt; m.CreateAccountPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/create-account/create-account.module&#x27;).then(\
+        (m) &#x3D;&gt; m.CreateAccountPageModule\
+      )&quot;,
   },
   {
     path: &#x27;enjoy-your-day&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/enjoy-your-day/enjoy-your-day.module&#x27;).then( m &#x3D;&gt; m.EnjoyYourDayPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/enjoy-your-day/enjoy-your-day.module&#x27;).then(\
+        (m) &#x3D;&gt; m.EnjoyYourDayPageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
   },
   {
     path: &#x27;fan-speed&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/fan-speed/fan-speed.module&#x27;).then( m &#x3D;&gt; m.FanSpeedPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/fan-speed/fan-speed.module&#x27;).then(\
+        (m) &#x3D;&gt; m.FanSpeedPageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: &#x27;fan-speed-update&#x27;,
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/fan-speed-update/fan-speed-update.module&#x27;).then(\
+        (m) &#x3D;&gt; m.FanSpeedUpdatePageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
   },
   {
     path: &#x27;forget-password&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/forget-password/forget-password.module&#x27;).then( m &#x3D;&gt; m.ForgetPasswordPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/forget-password/forget-password.module&#x27;).then(\
+        (m) &#x3D;&gt; m.ForgetPasswordPageModule\
+      )&quot;,
   },
   {
     path: &#x27;how-do-you-feel&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/how-do-you-feel/how-do-you-feel.module&#x27;).then( m &#x3D;&gt; m.HowDoYouFeelPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/how-do-you-feel/how-do-you-feel.module&#x27;).then(\
+        (m) &#x3D;&gt; m.HowDoYouFeelPageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
   },
   {
     path: &#x27;is-this-better&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/is-this-better/is-this-better.module&#x27;).then( m &#x3D;&gt; m.IsThisBetterPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/is-this-better/is-this-better.module&#x27;).then(\
+        (m) &#x3D;&gt; m.IsThisBetterPageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
   },
   {
     path: &#x27;set-new-password&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/set-new-password/set-new-password.module&#x27;).then( m &#x3D;&gt; m.SetNewPasswordPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/set-new-password/set-new-password.module&#x27;).then(\
+        (m) &#x3D;&gt; m.SetNewPasswordPageModule\
+      )&quot;,
   },
   {
     path: &#x27;sign-in&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/sign-in/sign-in.module&#x27;).then( m &#x3D;&gt; m.SignInPageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/sign-in/sign-in.module&#x27;).then((m) &#x3D;&gt; m.SignInPageModule)&quot;,
   },
   {
     path: &#x27;verify-code&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/verify-code/verify-code.module&#x27;).then( m &#x3D;&gt; m.VerifyCodePageModule)&quot;
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/verify-code/verify-code.module&#x27;).then(\
+        (m) &#x3D;&gt; m.VerifyCodePageModule\
+      )&quot;,
   },
+  {
+    path: &#x27;favourites&#x27;,
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/favourites/favourites.module&#x27;).then(\
+        (m) &#x3D;&gt; m.FavouritesPageModule\
+      )&quot;,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: &#x27;waiting&#x27;,
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/waiting/waiting.module&#x27;).then((m) &#x3D;&gt; m.WaitingPageModule)&quot;,
+  },
+  {
+    path: &#x27;board&#x27;,
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;./pages/board/board.module&#x27;).then((m) &#x3D;&gt; m.BoardPageModule)&quot;,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: &#x27;tabs&#x27;,
+    loadChildren: () &#x3D;&gt;
+      &quot;import(&#x27;../app/tabs/tabs.module&#x27;).then((m) &#x3D;&gt; m.TabsPageModule)&quot;,
+    //canActivate: [AuthGuard],
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
 </code></pre>
     </div>
 </div>

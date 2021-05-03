@@ -112,6 +112,12 @@ const routes: Routes = [
       import('./pages/board/board.module').then((m) => m.BoardPageModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'tabs',
+    loadChildren: () =>
+      import('../app/tabs/tabs.module').then((m) => m.TabsPageModule),
+    canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({

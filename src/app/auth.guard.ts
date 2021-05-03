@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     if (
-      localStorage.getItem('currentUserToken') &&
+      sessionStorage.getItem('currentUserToken') &&
       this.jwtService.isTokenAuthenticated()
     )
       return true;
