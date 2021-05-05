@@ -1,0 +1,876 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mental-shower documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mental-shower documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FavouritesPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/favourites/favourites.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-favourites</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./favourites.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./favourites.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#preferences">preferences</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deletePreference">deletePreference</a>
+                            </li>
+                            <li>
+                                <a href="#editPreference">editPreference</a>
+                            </li>
+                            <li>
+                                <a href="#fetchPreferences">fetchPreferences</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#selectPreference">selectPreference</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(jwtService: <a href="../injectables/JwtService.html">JwtService</a>, alertController: AlertController, httpClient: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/favourites/favourites.page.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>jwtService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/JwtService.html" target="_self" >JwtService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertController</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>httpClient</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deletePreference"></a>
+                    <span class="name">
+                        <b>
+                            deletePreference
+                        </b>
+                        <a href="#deletePreference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deletePreference(e: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>, preferenceId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/pages/favourites/favourites.page.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>preferenceId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editPreference"></a>
+                    <span class="name">
+                        <b>
+                            editPreference
+                        </b>
+                        <a href="#editPreference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editPreference(e: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>, preference)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/pages/favourites/favourites.page.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>preference</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchPreferences"></a>
+                    <span class="name">
+                        <b>
+                            fetchPreferences
+                        </b>
+                        <a href="#fetchPreferences"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchPreferences()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/pages/favourites/favourites.page.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/pages/favourites/favourites.page.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectPreference"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            selectPreference
+                        </b>
+                        <a href="#selectPreference"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>selectPreference(preference)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/pages/favourites/favourites.page.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>preference</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="preferences"></a>
+                        <span class="name">
+                            <b>
+                            preferences</b>
+                            <a href="#preferences"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/pages/favourites/favourites.page.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Constants } from &#x27;../../util/constants&#x27;;
+import { Router, NavigationExtras } from &#x27;@angular/router&#x27;;
+import { AlertController } from &#x27;@ionic/angular&#x27;;
+import { JwtService } from &#x27;../../util/jwtService&#x27;;
+
+@Component({
+  selector: &#x27;app-favourites&#x27;,
+  templateUrl: &#x27;./favourites.page.html&#x27;,
+  styleUrls: [&#x27;./favourites.page.scss&#x27;],
+})
+export class FavouritesPage implements OnInit {
+  constructor(
+    private jwtService: JwtService,
+    private alertController: AlertController,
+    private httpClient: HttpClient,
+    private router: Router
+  ) {
+    this.fetchPreferences();
+  }
+
+  preferences: any &#x3D; [];
+
+  fetchPreferences() {
+    const token &#x3D; this.jwtService.getDecodedAccessToken(
+      localStorage.getItem(&#x27;currentUserToken&#x27;)
+    );
+
+    this.httpClient
+      .get(Constants.DOMAIN + &#x60;preference/${token[&#x27;id&#x27;]}&#x60;)
+      .subscribe((data) &#x3D;&gt; {
+        this.preferences &#x3D; data;
+      });
+  }
+
+  deletePreference(e: Event, preferenceId) {
+    e.stopPropagation();
+
+    this.httpClient
+      .delete(Constants.DOMAIN + &#x60;preference/${preferenceId}&#x60;, {
+        observe: &#x27;response&#x27;,
+      })
+      .subscribe((resp) &#x3D;&gt; {
+        if (resp.status &#x3D;&#x3D; 200 || resp.status &#x3D;&#x3D; 204) this.fetchPreferences();
+        else {
+          //TODO: Invoke alert to notiy failure
+        }
+      });
+  }
+
+  editPreference(e: Event, preference) {
+    e.stopPropagation();
+    let navigationData: NavigationExtras &#x3D; {
+      state: {
+        preference,
+      },
+    };
+    this.router.navigate([&#x27;fan-speed-update&#x27;], navigationData);
+  }
+
+  async selectPreference(preference) {
+    const alert &#x3D; await this.alertController.create({
+      header: &#x27;Success&#x27;,
+      message: &#x27;Favourite selected&#x27;,
+      buttons: [&#x27;Okay, got it!&#x27;],
+    });
+
+    await alert.present();
+    let result &#x3D; await alert.onDidDismiss();
+  }
+  ngOnInit() {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-content [fullscreen]&#x3D;&quot;true&quot;&gt;
+  &lt;ion-row class&#x3D;&quot;padding-top-50&quot;&gt;
+    &lt;ion-col&gt;
+        &lt;strong&gt;My favorites&lt;/strong&gt;
+    &lt;/ion-col&gt;
+  &lt;/ion-row &gt;
+  &lt;ion-grid&gt;
+    &lt;div *ngIf&#x3D;&quot;preferences.length &gt; 0; else noData&quot;&gt;
+      &lt;ion-row class&#x3D;&quot;padding-top-20&quot; *ngFor&#x3D;&quot;let preference of preferences; let i &#x3D; index&quot;&gt;
+      &lt;ion-col&gt;
+        &lt;ion-card&gt;
+          &lt;ion-item (click)&#x3D;&quot;selectPreference(preference)&quot;&gt;
+            &lt;ion-button (click)&#x3D;&quot;editPreference($event, preference)&quot; color&#x3D;&quot;success&quot; fill&#x3D;&quot;outline&quot; slot&#x3D;&quot;start&quot;&gt;Edit&lt;/ion-button&gt;
+            &lt;ion-label&gt;{{preference.name}}&lt;/ion-label&gt;
+            &lt;ion-button (click)&#x3D;&quot;deletePreference($event, preference.id)&quot; fill&#x3D;&quot;clear&quot; slot&#x3D;&quot;end&quot;&gt;&lt;ion-icon name&#x3D;&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/ion-button&gt;
+          &lt;/ion-item&gt;
+        &lt;/ion-card&gt;
+      &lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+    &lt;/div&gt;
+    &lt;ng-template #noData&gt;
+      &lt;div class&#x3D;&quot;noDataDiv&quot;&gt;
+        &lt;img class&#x3D;&quot;img&quot; src&#x3D;&quot;assets/favourites.svg&quot; alt&#x3D;&quot;No preferences&quot; /&gt;
+        &lt;ion-label&gt;No data&lt;/ion-label&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/ion-grid&gt;
+&lt;/ion-content&gt; 
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./favourites.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.padding-top-50 {
+  text-align: left;
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  width: 110%;
+  justify-content: center;
+  color: aqua;
+  left: -25px;
+}
+
+ion-icon {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+ion-button {
+  --background-activated: green;
+}
+
+img {
+  position: absolute;
+  height: 200px;
+  width: 150px;
+  left: 65px;
+  top: 45px;
+}
+
+ion-col {
+  font-size: 24px;
+}
+
+.noDataDiv {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.img {
+  margin-left: 70px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <ion-row class="padding-top-50">    <ion-col>        <strong>My favorites</strong>    </ion-col>  </ion-row >  <ion-grid>    <div *ngIf="preferences.length > 0; else noData">      <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">      <ion-col>        <ion-card>          <ion-item (click)="selectPreference(preference)">            <ion-button (click)="editPreference($event, preference)" color="success" fill="outline" slot="start">Edit</ion-button>            <ion-label>{{preference.name}}</ion-label>            <ion-button (click)="deletePreference($event, preference.id)" fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>          </ion-item>        </ion-card>      </ion-col>    </ion-row>    </div>    <ng-template #noData>      <div class="noDataDiv">        <img class="img" src="assets/favourites.svg" alt="No preferences" />        <ion-label>No data</ion-label>      </div>    </ng-template>  </ion-grid></ion-content> </div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardPage', 'selector': 'app-board'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'FanSpeedUpdatePage', 'selector': 'app-fan-speed-update'},{'name': 'FavouritesPage', 'selector': 'app-favourites'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'},{'name': 'WaitingPage', 'selector': 'app-waiting'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FavouritesPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FavouritesPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

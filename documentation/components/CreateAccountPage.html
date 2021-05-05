@@ -121,6 +121,30 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#alertController">alertController</a>
+                            </li>
+                            <li>
+                                <a href="#password">password</a>
+                            </li>
+                            <li>
+                                <a href="#password_confirm">password_confirm</a>
+                            </li>
+                            <li>
+                                <a href="#username">username</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -131,7 +155,25 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#createUser">createUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleCreation">handleCreation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handlerFailuer">handlerFailuer</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#presentNotification">presentNotification</a>
+                            </li>
+                            <li>
+                                <a href="#validatePassword">validatePassword</a>
                             </li>
                         </ul>
                     </td>
@@ -151,15 +193,69 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(httpClient: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, alertController: AlertController)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>httpClient</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertController</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -173,6 +269,127 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createUser"></a>
+                    <span class="name">
+                        <b>
+                            createUser
+                        </b>
+                        <a href="#createUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleCreation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            handleCreation
+                        </b>
+                        <a href="#handleCreation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleCreation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handlerFailuer"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            handlerFailuer
+                        </b>
+                        <a href="#handlerFailuer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handlerFailuer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -195,8 +412,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:78</a></div>
                 </td>
             </tr>
 
@@ -212,6 +429,256 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="presentNotification"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            presentNotification
+                        </b>
+                        <a href="#presentNotification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>presentNotification(header: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, buttons: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>header</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>buttons</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validatePassword"></a>
+                    <span class="name">
+                        <b>
+                            validatePassword
+                        </b>
+                        <a href="#validatePassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validatePassword()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/pages/create-account/create-account.page.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="alertController"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            alertController</b>
+                            <a href="#alertController"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AlertController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="password"></a>
+                        <span class="name">
+                            <b>
+                            password</b>
+                            <a href="#password"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="password_confirm"></a>
+                        <span class="name">
+                            <b>
+                            password_confirm</b>
+                            <a href="#password_confirm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="username"></a>
+                        <span class="name">
+                            <b>
+                            username</b>
+                            <a href="#username"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/create-account/create-account.page.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
 </section>
 
 </div>
@@ -219,6 +686,10 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Constants } from &#x27;../../util/constants&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AlertController } from &#x27;@ionic/angular&#x27;;
 
 @Component({
   selector: &#x27;app-create-account&#x27;,
@@ -226,12 +697,72 @@
   styleUrls: [&#x27;./create-account.page.scss&#x27;],
 })
 export class CreateAccountPage implements OnInit {
+  username: String;
+  password_confirm: String;
+  password: String;
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient,
+    private router: Router,
+    public alertController: AlertController
+  ) {}
 
-  ngOnInit() {
+  createUser() {
+    if (!this.validatePassword()) return;
+
+    this.httpClient
+      .post(
+        Constants.DOMAIN + &#x27;user&#x27;,
+        {
+          username: this.username,
+          password: this.password,
+        },
+        { observe: &#x27;response&#x27; }
+      )
+      .subscribe(
+        (resp) &#x3D;&gt; {
+          if (resp.status &#x3D;&#x3D; 200 || resp.status &#x3D;&#x3D; 204) {
+            this.handleCreation();
+          }
+        },
+        (err) &#x3D;&gt; {
+          console.log(&#x27;error&#x27;, err);
+        }
+      );
   }
 
+  validatePassword() {
+    return this.password &#x3D;&#x3D;&#x3D; this.password_confirm;
+  }
+
+  async presentNotification(
+    header: string,
+    message: string,
+    buttons: string[]
+  ) {
+    const alert &#x3D; await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: buttons,
+    });
+
+    await alert.present();
+    let result &#x3D; await alert.onDidDismiss();
+    console.log(result);
+  }
+
+  async handleCreation() {
+    await this.presentNotification(
+      &#x27;Success&#x27;,
+      &#x27;Your account has been created. Now you can log in.&#x27;,
+      [&quot;Let&#x27;s go&quot;]
+    );
+    this.router.navigate([&#x27;/sign-in&#x27;]);
+  }
+
+  async handlerFailuer() {}
+
+  ngOnInit() {}
 }
 </code></pre>
     </div>
@@ -247,26 +778,26 @@ export class CreateAccountPage implements OnInit {
       &lt;/ion-row&gt;
       &lt;ion-row class&#x3D;&quot;padding-top-50&quot;&gt;
         &lt;ion-col&gt;
-          &lt;ion-label&gt;&lt;small&gt;Create Your ID&lt;/small&gt;&lt;/ion-label&gt;
-          &lt;ion-input placeholder&#x3D;&quot;Enter your new ID here&quot; type&#x3D;&quot;text&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-label&gt;&lt;small&gt;Username&lt;/small&gt;&lt;/ion-label&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;username&quot; placeholder&#x3D;&quot;Enter your new username here&quot; type&#x3D;&quot;text&quot; required&gt;&lt;/ion-input&gt;
         &lt;/ion-col&gt;
       &lt;/ion-row&gt;
       &lt;ion-row class&#x3D;&quot;padding-top-25&quot;&gt;
         &lt;ion-col&gt;
           &lt;ion-label&gt;&lt;small&gt;Create password&lt;/small&gt;&lt;/ion-label&gt;
-          &lt;ion-input placeholder&#x3D;&quot;Enter new password here&quot; type&#x3D;&quot;password&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;password&quot; placeholder&#x3D;&quot;Enter new password here&quot; type&#x3D;&quot;password&quot; required&gt;&lt;/ion-input&gt;
         &lt;/ion-col&gt;
       &lt;/ion-row&gt;
       &lt;ion-row class&#x3D;&quot;padding-top-25&quot;&gt;
         &lt;ion-col&gt;
           &lt;ion-label&gt;&lt;small&gt;Repeat password&lt;/small&gt;&lt;/ion-label&gt;
-          &lt;ion-input placeholder&#x3D;&quot;Enter new password again&quot; type&#x3D;&quot;password&quot;&gt;&lt;/ion-input&gt;
+          &lt;ion-input [(ngModel)]&#x3D;&quot;password_confirm&quot; placeholder&#x3D;&quot;Enter new password again&quot; type&#x3D;&quot;password&quot; required&gt;&lt;/ion-input&gt;
         &lt;/ion-col&gt;
       &lt;/ion-row&gt;
       
       &lt;ion-row class&#x3D;&quot;padding-top-50&quot;&gt;
         &lt;ion-col&gt;
-          &lt;ion-button href&#x3D;&quot;sign-in&quot; expand&#x3D;&quot;block&quot;&gt;Create&lt;/ion-button&gt;
+          &lt;ion-button (click)&#x3D;&quot;createUser()&quot; expand&#x3D;&quot;block&quot;&gt;Create&lt;/ion-button&gt;
         &lt;/ion-col&gt;
       &lt;/ion-row&gt;
     &lt;/ion-grid&gt;
@@ -306,8 +837,8 @@ export class CreateAccountPage implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <div id="container">    <ion-grid>      <ion-row class="padding-top-50">        <ion-col>          <strong>Create Account</strong>        </ion-col>      </ion-row>      <ion-row class="padding-top-50">        <ion-col>          <ion-label><small>Create Your ID</small></ion-label>          <ion-input placeholder="Enter your new ID here" type="text"></ion-input>        </ion-col>      </ion-row>      <ion-row class="padding-top-25">        <ion-col>          <ion-label><small>Create password</small></ion-label>          <ion-input placeholder="Enter new password here" type="password"></ion-input>        </ion-col>      </ion-row>      <ion-row class="padding-top-25">        <ion-col>          <ion-label><small>Repeat password</small></ion-label>          <ion-input placeholder="Enter new password again" type="password"></ion-input>        </ion-col>      </ion-row>            <ion-row class="padding-top-50">        <ion-col>          <ion-button href="sign-in" expand="block">Create</ion-button>        </ion-col>      </ion-row>    </ion-grid>  </div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'}];
+        var COMPONENT_TEMPLATE = '<div><ion-content [fullscreen]="true">  <div id="container">    <ion-grid>      <ion-row class="padding-top-50">        <ion-col>          <strong>Create Account</strong>        </ion-col>      </ion-row>      <ion-row class="padding-top-50">        <ion-col>          <ion-label><small>Username</small></ion-label>          <ion-input [(ngModel)]="username" placeholder="Enter your new username here" type="text" required></ion-input>        </ion-col>      </ion-row>      <ion-row class="padding-top-25">        <ion-col>          <ion-label><small>Create password</small></ion-label>          <ion-input [(ngModel)]="password" placeholder="Enter new password here" type="password" required></ion-input>        </ion-col>      </ion-row>      <ion-row class="padding-top-25">        <ion-col>          <ion-label><small>Repeat password</small></ion-label>          <ion-input [(ngModel)]="password_confirm" placeholder="Enter new password again" type="password" required></ion-input>        </ion-col>      </ion-row>            <ion-row class="padding-top-50">        <ion-col>          <ion-button (click)="createUser()" expand="block">Create</ion-button>        </ion-col>      </ion-row>    </ion-grid>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardPage', 'selector': 'app-board'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'FanSpeedUpdatePage', 'selector': 'app-fan-speed-update'},{'name': 'FavouritesPage', 'selector': 'app-favourites'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'},{'name': 'WaitingPage', 'selector': 'app-waiting'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CreateAccountPage'};
 </script>

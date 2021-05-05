@@ -67,7 +67,7 @@ export class FanSpeedPage implements OnInit {
               resp.status == 201 ||
               resp.status == 204
             ) {
-              this.router.navigate(['/favourites']);
+              this.router.navigate(['/tabs/favourites']);
             }
           },
           (err) => {

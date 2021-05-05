@@ -43,8 +43,8 @@ export class SignInPage implements OnInit {
         (resp) => {
           this.loading = false;
           if (resp.status == 200 || resp.status == 204) {
-            localStorage.setItem('currentUserToken', resp.body['token']);
-            this.router.navigate(['/how-do-you-feel']);
+            sessionStorage.setItem('currentUserToken', resp.body['token']);
+            this.router.navigate(['/tabs/how-do-you-feel']);
           }
         },
         (err) => {

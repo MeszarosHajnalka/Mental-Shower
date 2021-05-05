@@ -158,25 +158,32 @@ export class TabsPage {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ion-tabs&gt;
-
+  &lt;!-- Tab bar --&gt;
   &lt;ion-tab-bar slot&#x3D;&quot;bottom&quot;&gt;
-    &lt;ion-tab-button tab&#x3D;&quot;tab1&quot;&gt;
-      &lt;ion-icon name&#x3D;&quot;triangle&quot;&gt;&lt;/ion-icon&gt;
-      &lt;ion-label&gt;Tab 1&lt;/ion-label&gt;
+
+    &lt;ion-tab-button  tab&#x3D;&quot;how-do-you-feel&quot;&gt;
+      &lt;ion-icon color &#x3D; &quot;light&quot; name&#x3D;&quot;list&quot;&gt;&gt;&lt;/ion-icon&gt;
+      &lt;ion-label&gt;Sessions&lt;/ion-label&gt;
     &lt;/ion-tab-button&gt;
 
-    &lt;ion-tab-button tab&#x3D;&quot;tab2&quot;&gt;
-      &lt;ion-icon name&#x3D;&quot;ellipse&quot;&gt;&lt;/ion-icon&gt;
-      &lt;ion-label&gt;Tab 2&lt;/ion-label&gt;
+    &lt;ion-tab-button  tab&#x3D;&quot;favourites&quot;&gt;
+      &lt;ion-icon color &#x3D; &quot;light&quot; name&#x3D;&quot;heart&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-label&gt;Sessions&lt;/ion-label&gt;
     &lt;/ion-tab-button&gt;
 
-    &lt;ion-tab-button tab&#x3D;&quot;tab3&quot;&gt;
-      &lt;ion-icon name&#x3D;&quot;square&quot;&gt;&lt;/ion-icon&gt;
-      &lt;ion-label&gt;Tab 3&lt;/ion-label&gt;
-    &lt;/ion-tab-button&gt;
+  &lt;!--&lt;ion-tab-button [routerLink]&#x3D;&quot;home&quot; expand&#x3D;&quot;block&quot;&gt;
+  &lt;ion-icon color &#x3D; &quot;light&quot; name&#x3D;&quot;home-sharp&quot;&gt;&lt;/ion-icon&gt;
+  &lt;/ion-tab-button&gt;
+  &lt;ion-tab-button [routerLink]&#x3D;&quot;how-do-you-feel&quot; expand&#x3D;&quot;block&quot;&gt;
+  &lt;ion-icon color &#x3D; &quot;light&quot; name&#x3D;&quot;list&quot;&gt;&lt;/ion-icon&gt;
+  &lt;/ion-tab-button&gt;
+  &lt;ion-tab-button [routerLink]&#x3D;&quot;favourites&quot; expand&#x3D;&quot;block&quot;&gt;
+  &lt;ion-icon color &#x3D; &quot;light&quot; name&#x3D;&quot;heart&quot;&gt;&lt;/ion-icon&gt;
+  &lt;/ion-tab-button&gt;--&gt;
+
   &lt;/ion-tab-bar&gt;
 
-&lt;/ion-tabs&gt;
+  &lt;/ion-tabs&gt;
 </code></pre>
     </div>
 
@@ -213,8 +220,8 @@ export class TabsPage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <ion-tab-bar slot="bottom">    <ion-tab-button tab="tab1">      <ion-icon name="triangle"></ion-icon>      <ion-label>Tab 1</ion-label>    </ion-tab-button>    <ion-tab-button tab="tab2">      <ion-icon name="ellipse"></ion-icon>      <ion-label>Tab 2</ion-label>    </ion-tab-button>    <ion-tab-button tab="tab3">      <ion-icon name="square"></ion-icon>      <ion-label>Tab 3</ion-label>    </ion-tab-button>  </ion-tab-bar></ion-tabs></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'}];
+        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <!-- Tab bar -->  <ion-tab-bar slot="bottom">    <ion-tab-button  tab="how-do-you-feel">      <ion-icon color = "light" name="list">></ion-icon>      <ion-label>Sessions</ion-label>    </ion-tab-button>    <ion-tab-button  tab="favourites">      <ion-icon color = "light" name="heart"></ion-icon>      <ion-label>Sessions</ion-label>    </ion-tab-button>  <!--<ion-tab-button [routerLink]="home" expand="block">  <ion-icon color = "light" name="home-sharp"></ion-icon>  </ion-tab-button>  <ion-tab-button [routerLink]="how-do-you-feel" expand="block">  <ion-icon color = "light" name="list"></ion-icon>  </ion-tab-button>  <ion-tab-button [routerLink]="favourites" expand="block">  <ion-icon color = "light" name="heart"></ion-icon>  </ion-tab-button>-->  </ion-tab-bar>  </ion-tabs></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BoardPage', 'selector': 'app-board'},{'name': 'CreateAccountPage', 'selector': 'app-create-account'},{'name': 'EnjoyYourDayPage', 'selector': 'app-enjoy-your-day'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FanSpeedPage', 'selector': 'app-fan-speed'},{'name': 'FanSpeedUpdatePage', 'selector': 'app-fan-speed-update'},{'name': 'FavouritesPage', 'selector': 'app-favourites'},{'name': 'ForgetPasswordPage', 'selector': 'app-forget-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'HowDoYouFeelPage', 'selector': 'app-how-do-you-feel'},{'name': 'IntroduceStepPage', 'selector': 'app-introduce-step'},{'name': 'IsThisBetterPage', 'selector': 'app-is-this-better'},{'name': 'SetNewPasswordPage', 'selector': 'app-set-new-password'},{'name': 'SignInPage', 'selector': 'app-sign-in'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'VerifyCodePage', 'selector': 'app-verify-code'},{'name': 'WaitingPage', 'selector': 'app-waiting'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TabsPage'};
 </script>

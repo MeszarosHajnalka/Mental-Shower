@@ -116,6 +116,11 @@ const routes: Routes = [
     path: 'breathe',
     loadChildren: () => import('./pages/breathe/breathe.module').then( m => m.BreathePageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('../app/tabs/tabs.module').then((m) => m.TabsPageModule),
+    canActivate: [AuthGuard],
+  }
 ];
 
 @NgModule({

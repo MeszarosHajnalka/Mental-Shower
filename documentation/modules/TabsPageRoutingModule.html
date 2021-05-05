@@ -80,27 +80,23 @@ const routes: Routes &#x3D; [
     component: TabsPage,
     children: [
       {
-        path: &#x27;tab1&#x27;,
-        loadChildren: () &#x3D;&gt; &quot;import(&#x27;../tab1/tab1.module&#x27;).then(m &#x3D;&gt; m.Tab1PageModule)&quot;
+        path: &#x27;how-do-you-feel&#x27;,
+        loadChildren: () &#x3D;&gt; &quot;import(&#x27;../pages/how-do-you-feel/how-do-you-feel.module&#x27;).then(m &#x3D;&gt; m.HowDoYouFeelPageModule)&quot;
       },
       {
-        path: &#x27;tab2&#x27;,
-        loadChildren: () &#x3D;&gt; &quot;import(&#x27;../tab2/tab2.module&#x27;).then(m &#x3D;&gt; m.Tab2PageModule)&quot;
-      },
-      {
-        path: &#x27;tab3&#x27;,
-        loadChildren: () &#x3D;&gt; &quot;import(&#x27;../tab3/tab3.module&#x27;).then(m &#x3D;&gt; m.Tab3PageModule)&quot;
+        path: &#x27;favourites&#x27;,
+        loadChildren: () &#x3D;&gt; &quot;import(&#x27;../pages/favourites/favourites.module&#x27;).then(m &#x3D;&gt; m.FavouritesPageModule)&quot;
       },
       {
         path: &#x27;&#x27;,
-        redirectTo: &#x27;/tabs/tab1&#x27;,
+        redirectTo: &#x27;/tabs/how-do-you-feel&#x27;,
         pathMatch: &#x27;full&#x27;
       }
     ]
   },
   {
     path: &#x27;&#x27;,
-    redirectTo: &#x27;/tabs/tab1&#x27;,
+    redirectTo: &#x27;/tabs/how-do-you-feel&#x27;,
     pathMatch: &#x27;full&#x27;
   }
 ];

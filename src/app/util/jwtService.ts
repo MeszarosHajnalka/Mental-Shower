@@ -16,7 +16,7 @@ export class JwtService {
   }
 
   public isTokenAuthenticated() {
-    const token = localStorage.getItem('currentUserToken');
+    const token = sessionStorage.getItem('currentUserToken');
     return !this.jwtHelper.isTokenExpired(token);
   }
 }
