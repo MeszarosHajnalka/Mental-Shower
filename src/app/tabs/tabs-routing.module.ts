@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/favourites/favourites.module').then(m => m.FavouritesPageModule)
       },
       {
+        path: 'breathe',
+        loadChildren: () => import('../pages/breathe/breathe.module').then( m => m.BreathePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/how-do-you-feel',
         pathMatch: 'full'
