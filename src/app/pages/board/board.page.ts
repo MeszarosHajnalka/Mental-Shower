@@ -47,7 +47,7 @@ export class BoardPage implements OnInit {
       .subscribe(
         (resp) => {
           if (resp.status == 200 || resp.status == 201 || resp.status == 204) {
-            this.router.navigate(['favourites']);
+            this.router.navigate(['/tabs/favourites']);
           }
         },
         (err) => {
