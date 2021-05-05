@@ -1,11 +1,10 @@
+import { BreathePage } from './breathe.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { BreathePageRoutingModule } from './breathe-routing.module';
-import { BreathePage } from './breathe.page';
 
 
 @NgModule({
@@ -15,6 +14,7 @@ import { BreathePage } from './breathe.page';
     IonicModule,
     BreathePageRoutingModule
   ],
+  declarations: [BreathePage]
 })
 
 export class BreathePageModule {}
