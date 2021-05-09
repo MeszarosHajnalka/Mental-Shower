@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
+import { FeedbackButtonsComponent } from '../../feedback-buttons/feedback-buttons.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,DashboardComponent]
+  declarations: [HomePage,DashboardComponent,FeedbackButtonsComponent]
 })
 export class HomePageModule {}

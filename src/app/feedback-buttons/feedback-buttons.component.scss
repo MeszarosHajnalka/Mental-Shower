@@ -28,22 +28,22 @@ strong {
    
     height: 150px;
   }
-  ion-card {
-    --background: rgba(114, 211, 217, 0.1);
-    --border-radius: 15px;
+  .card {
+    background: rgba(114, 211, 217, 0.1);
+    border-radius: 10px;
+   // padding: -110;
+   margin-right: -20px;
+  margin-left: -20px;
+   height: 70;
    
-    height: 150px;
+   
+    
   }
   .ion-button-small {
     --background: rgba(114, 211, 217, 0.1);
     --border-radius: 15px;
    // min-width: 10em;
     height: 70px;
-  }
-  .card{
-    --background: rgba(114, 211, 217, 0.1);
-    --border-radius: 15px;
-
   }
   
   img {
