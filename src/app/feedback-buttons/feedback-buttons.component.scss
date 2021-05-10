@@ -28,11 +28,16 @@ strong {
    
     height: 150px;
   }
-  ion-card {
-    --background: rgba(114, 211, 217, 0.1);
-    --border-radius: 15px;
+  .cardish {
+    background: rgba(114, 211, 217, 0.1);
+    border-radius: 15px;
+   // padding: -110;
+   margin-right: -20px;
+  margin-left: -20px;
+   height: 70;
    
-    height: 150px;
+   
+    
   }
   .ion-button-small {
     --background: rgba(114, 211, 217, 0.1);
@@ -43,6 +48,9 @@ strong {
   
   img {
     width: 100px;
+  }
+  .imgy{
+    width: 190px;
   }
   .img-icon{ width: 30px;
 
@@ -55,7 +63,4 @@ strong {
   .two-lines {
     min-width: 10em;
   }
-
-  .classMenu {
-      background-color: #72D3D9;
-  }
+  

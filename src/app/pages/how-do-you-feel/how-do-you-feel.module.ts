@@ -8,14 +8,15 @@ import { HowDoYouFeelPageRoutingModule } from './how-do-you-feel-routing.module'
 
 import { HowDoYouFeelPage } from './how-do-you-feel.page';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-
+import { FeedbackButtonsComponent } from '../../feedback-buttons/feedback-buttons.component';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HowDoYouFeelPageRoutingModule
+    HowDoYouFeelPageRoutingModule,
+    
   ],
-  declarations: [HowDoYouFeelPage,DashboardComponent]
+  declarations: [HowDoYouFeelPage,DashboardComponent, FeedbackButtonsComponent]
 })
 export class HowDoYouFeelPageModule {}

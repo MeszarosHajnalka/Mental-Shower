@@ -40,6 +40,11 @@ strong {
    // min-width: 10em;
     height: 70px;
   }
+  .card{
+    --background: rgba(114, 211, 217, 0.1);
+    --border-radius: 15px;
+
+  }
   
   img {
     width: 100px;
