@@ -27,6 +27,7 @@ setPrefTimeOut(f){
   if(f=="good"){
     console.log("good was pressed")
     this.text=" Great, we will keep up with the good work!"
+    this.pressedGood();
   }
  
   if(f=="warm"){
@@ -41,6 +42,7 @@ setPrefTimeOut(f){
 
 }
 pressedGood(){
+console.log("logic here");
 
 };
 pressedCold(){
