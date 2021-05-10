@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-row class="padding-top-25">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="/how-do-you-feel"></ion-back-button>
+          </ion-buttons>
+        </ion-toolbar>
+    </ion-row>
+      <ion-row class="padding-top-50">
+        <ion-col>
+          <strong>Problem</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-18">
+        <ion-col>
+          <p>Hey, is something wrong with you today?</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/did-you-know']" expand="block">
+            <p>Tired</p>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/fan-speed']" expand="block">
+            <p>Headache</p>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/fan-speed']" expand="block">
+            <p>Not enough sleep</p>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/fan-speed']" expand="block">
+            <p>feeling uncomfortable </p>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-side-25 padding-top-25">
+        <ion-col>
+          <ion-button [routerLink]="['/fan-speed']" expand="block">
+            <p>can't focus</p>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

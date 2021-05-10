@@ -120,7 +120,17 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('../app/tabs/tabs.module').then((m) => m.TabsPageModule),
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'did-you-know',
+    loadChildren: () => import('./pages/did-you-know/did-you-know.module').then( m => m.DidYouKnowPageModule)
+  },
+  {
+    path: 'problems',
+    loadChildren: () => import('./pages/problems/problems.module').then( m => m.ProblemsPageModule)
   }
+
+
 ];
 
 @NgModule({
