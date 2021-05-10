@@ -68,6 +68,7 @@ export class FavouritesPage implements OnInit {
 
     await alert.present();
     let result = await alert.onDidDismiss();
+    this.router.navigate(['tabs/how-do-you-feel']);
   }
   ngOnInit() {}
 }

@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/breathe/breathe.module').then( m => m.BreathePageModule)
       },
       {
+        path: 'group',
+        loadChildren: () => import('../group-page/group-page.module').then( m => m.GroupPagePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/how-do-you-feel',
         pathMatch: 'full'

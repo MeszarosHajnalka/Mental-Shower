@@ -122,6 +122,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'group-page',
+    loadChildren: () => import('./group-page/group-page.module').then( m => m.GroupPagePageModule)
+  },
+  {
     path: 'did-you-know',
     loadChildren: () => import('./pages/did-you-know/did-you-know.module').then( m => m.DidYouKnowPageModule)
   },
@@ -129,7 +133,6 @@ const routes: Routes = [
     path: 'problems',
     loadChildren: () => import('./pages/problems/problems.module').then( m => m.ProblemsPageModule)
   }
-
 
 ];
 
