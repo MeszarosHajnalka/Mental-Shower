@@ -23,7 +23,7 @@ setPrefTimeOut(f){
   setTimeout(() => {
     console.log('show');
     this.show = true;
-  }, 60000);
+  }, 2000);
   if(f=="good"){
     console.log("good was pressed")
     this.text=" Great, we will keep up with the good work!"
