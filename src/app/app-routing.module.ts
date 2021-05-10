@@ -112,6 +112,10 @@ const routes: Routes = [
       import('./pages/board/board.module').then((m) => m.BoardPageModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'group',
+    loadChildren: () => import('./group-page/group-page.module').then((m) => m.GroupPagePageModule)
+  }
 ];
 
 @NgModule({

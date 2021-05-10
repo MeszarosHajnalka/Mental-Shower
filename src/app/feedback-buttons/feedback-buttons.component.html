@@ -1,5 +1,5 @@
-<ion-content [fullscreen]="true">
-  <div id="container" *ngIf="show"  >
+
+  <div *ngIf="show"  >
     <ion-grid>
       <ion-row class="padding-top-50">
         <ion-col>
@@ -37,7 +37,7 @@
   <ion-col>
     <ion-button class="ion-button-small" [routerLink]="['/favourites']" expand="block">
       <div> 
-        <span><ion-label>Bad</ion-label></span><br>
+        <span><ion-label>Uncomfortable</ion-label></span><br>
         <img  class="img-icon"src="assets/person-delete-outline.svg"/>
       </div>
      
@@ -65,4 +65,3 @@
   </ion-grid>
   
 </div>
-</ion-content>
