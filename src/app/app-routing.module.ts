@@ -120,7 +120,11 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('../app/tabs/tabs.module').then((m) => m.TabsPageModule),
     canActivate: [AuthGuard],
+  },  {
+    path: 'group-page',
+    loadChildren: () => import('./group-page/group-page.module').then( m => m.GroupPagePageModule)
   }
+
 ];
 
 @NgModule({
