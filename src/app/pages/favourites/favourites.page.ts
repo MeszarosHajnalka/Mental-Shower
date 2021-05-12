@@ -24,7 +24,7 @@ export class FavouritesPage implements OnInit {
 
   fetchPreferences() {
     const token = this.jwtService.getDecodedAccessToken(
-      localStorage.getItem('currentUserToken')
+      sessionStorage.getItem('currentUserToken')
     );
 
     this.httpClient
@@ -60,14 +60,15 @@ export class FavouritesPage implements OnInit {
   }
 
   async selectPreference(preference) {
-    const alert = await this.alertController.create({
+    const alerty = await this.alertController.create({
       header: 'Success',
       message: 'Favourite selected',
       buttons: ['Okay, got it!'],
     });
-
-    await alert.present();
-    let result = await alert.onDidDismiss();
+    localStorage.setItem('selectedPreference', preference.id);
+    console.log(localStorage.getItem('selectedPreference'));
+    await alerty.present();
+    let result = await alerty.onDidDismiss();
     this.router.navigate(['tabs/how-do-you-feel']);
   }
   ngOnInit() {}
