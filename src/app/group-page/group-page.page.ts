@@ -1,6 +1,8 @@
+import { ZoneService } from './../services/dbservices/zone.service';
 import { Component, OnInit } from '@angular/core';
 import { ClassroomService } from '../services/dbservices/classroom.service';
 import { Classroom } from '../services/models/classroom.model';
+import { Zone } from '../services/models/zone.model';
 
 
 @Component({
@@ -14,7 +16,8 @@ export class GroupPagePage implements OnInit {
   public roomIsSelected:boolean;
 
   constructor(  
-    private classroomService:ClassroomService
+    private classroomService:ClassroomService,
+    private ZoneService: ZoneService
   ) { }
 
   ngOnInit() {
@@ -23,10 +26,23 @@ export class GroupPagePage implements OnInit {
   }
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected(){
-    console.log(this.roomIsSelected);
-    console.log(this.roomSelected, " was selected")
+     this.ZoneService.getAll()
+     .subscribe(
+       data => {
+        let myZones = data;
+        myZones.forEach(zone => {
+          if (zone.class_id == this.roomSelected.class_id) {
+            console.log(zone);
+          }
+          
+        });
+       }
+     )
+    
+    //console.log(this.roomIsSelected);
+    //console.log(this.roomSelected.class_id);
     this.roomIsSelected=true;
-    console.log(this.roomIsSelected)
+    //console.log(this.roomIsSelected)
 
   }
   
