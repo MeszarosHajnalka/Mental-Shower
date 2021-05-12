@@ -1,5 +1,5 @@
 export abstract class Constants {
-  static readonly DOMAIN = "http://localhost:8080/api/";
+  static readonly DOMAIN = "https://mental-shower-api.herokuapp.com/api/";
 }
 
 //Our api on the webs:
