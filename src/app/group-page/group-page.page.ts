@@ -26,6 +26,7 @@ export class GroupPagePage implements OnInit {
   }
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected(){
+    try {
      this.ZoneService.getAll()
      .subscribe(
        data => {
@@ -38,6 +39,9 @@ export class GroupPagePage implements OnInit {
         });
        }
      )
+    } catch (error) {
+      console.log(error);
+    }
     
     //console.log(this.roomIsSelected);
     //console.log(this.roomSelected.class_id);
