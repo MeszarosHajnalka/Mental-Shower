@@ -44,4 +44,8 @@ export class GroupPagePage implements OnInit {
   }
   // There is a folder services inside I have the model and the service file with all the methods, havet tested them all but thye should work.
   // just change the LOCAL port so it actually works 😂
+
+  isakTest() {
+    
+  }
 }

@@ -15,7 +15,7 @@
   <ion-item class="classMenu">
     <ion-label>Choose Classroom</ion-label>
     <ion-icon name="arrow-dropdown"></ion-icon>
-  <ion-select [(ngModel)]="roomSelected" (ngModelChange)="roomWasSelected()">
+  <ion-select interface="popover" [(ngModel)]="roomSelected" (ngModelChange)="roomWasSelected()">
    <!--  <ion-select-option>Copenhagen</ion-select-option>-->
    <ion-select-option *ngFor="let curRoom of classroomList" [value]="curRoom"  >{{curRoom.classroomname}}</ion-select-option>
   </ion-select>
@@ -61,7 +61,7 @@
   
       <ion-row class="padding-side-25 padding-top-10">
         <ion-col>
-          <ion-button class="ion-button" expand="block">
+          <ion-button class="ion-button" value = 3 expand="block">
             <div> 
               <span><p>Zone 3</p></span><br>
               <img src="assets\icon\groupeImage.png"/>
@@ -70,7 +70,7 @@
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="ion-button" routerLink="/tabs/favourites" expand="block">
+          <ion-button class="ion-button" value = 4 routerLink="/tabs/favourites" expand="block">
             <div> 
               <span><p>Zone 4</p></span><br>
               <img src="assets\icon\groupeImage.png"/>

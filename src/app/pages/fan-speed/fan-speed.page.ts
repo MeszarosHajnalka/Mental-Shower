@@ -48,7 +48,7 @@ export class FanSpeedPage implements OnInit {
 
   confirmSelection() {
     console.log(this.humidity, this.temperature, this.airspeed);
-    localStorage.setItem('currentUserStuff', "Isak preference in a String value 5");
+    //localStorage.setItem('currentUserStuff', "Isak preference in a String value 5");
 
     if (!this.validateSliderData()) return;
 
