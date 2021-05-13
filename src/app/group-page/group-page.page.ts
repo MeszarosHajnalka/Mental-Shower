@@ -12,12 +12,14 @@ import { Zone } from '../services/models/zone.model';
 })
 export class GroupPagePage implements OnInit {
   classroomList: Classroom[];
+  zoneListt: Zone;
   public roomSelected:any;
   public roomIsSelected:boolean;
+  b1;
 
   constructor(  
     private classroomService:ClassroomService,
-    private ZoneService: ZoneService
+    private zoneService: ZoneService
   ) { }
 
   ngOnInit() {
@@ -25,29 +27,28 @@ export class GroupPagePage implements OnInit {
     this.roomIsSelected = false;
   }
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
-  roomWasSelected(){
-    try {
-     this.ZoneService.getAll()
+  roomWasSelected() { 
+    console.log(this.roomSelected.class_id)
+     this.zoneService.get(this.roomSelected.class_id)
+     
      .subscribe(
-       data => {
-        let myZones = data;
-        myZones.forEach(zone => {
-          if (zone.class_id == this.roomSelected.class_id) {
-            console.log(zone);
-          }
-          
-        });
-       }
-     )
-    } catch (error) {
-      console.log(error);
-    }
+       
+      data => {
+        this.zoneListt = data;
+        console.log(this.zoneListt, "kisttt");
+        
+      },
+      error => {
+        console.log(error);
+      });
+
     
     //console.log(this.roomIsSelected);
     //console.log(this.roomSelected.class_id);
     this.roomIsSelected=true;
     //console.log(this.roomIsSelected)
-
+      //this.b1=this.zoneListt[0].zone_id;
+     // console.log(this.zoneListt[0].zone_id,"ID")
   }
   
 //my get method 
