@@ -12,7 +12,8 @@ import { Zone } from '../services/models/zone.model';
 })
 export class GroupPagePage implements OnInit {
   classroomList: Classroom[];
-  zoneListt: Zone;
+  zoneList: Zone[];
+  //zoneListThisRoom=[];
   public roomSelected:any;
   public roomIsSelected:boolean;
   b1;
@@ -29,14 +30,15 @@ export class GroupPagePage implements OnInit {
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected() { 
     console.log(this.roomSelected.class_id)
-     this.zoneService.get(this.roomSelected.class_id)
+    //this.roomSelected.class_id
+     this.zoneService.getClass(this.roomSelected.class_id)
      
-     .subscribe(
-       
+     .subscribe(       
       data => {
-        this.zoneListt = data;
-        console.log(this.zoneListt, "kisttt");
-        
+        this.zoneList = data;
+        console.log(this.zoneList, "kisttt");
+        //this.zoneListThisRoom = this.zoneListt
+        console.log(this.zoneList," this is the ZONELIST, "+  " <- the otherone ")
       },
       error => {
         console.log(error);
@@ -57,6 +59,7 @@ export class GroupPagePage implements OnInit {
       .subscribe(
         data => {
           this.classroomList = data;
+          console.log(this.classroomList)
           
         },
         error => {
@@ -66,7 +69,59 @@ export class GroupPagePage implements OnInit {
   // There is a folder services inside I have the model and the service file with all the methods, havet tested them all but thye should work.
   // just change the LOCAL port so it actually works 😂
 
-  isakTest() {
-    
+  isakTest(value) {
+    if(value=='FrontLeft'){
+      console.log("FrontLeft was CLICKED motherforker")
+     this.zoneList.forEach(i => {
+      { if (i.description == "FrontLeft" )
+       {
+        localStorage.setItem("zone",i.zone_id);
+       
+       }
+        
+      }});
+      console.log(this.zoneList)
+    }
+    if(value=="FrontRight"){
+      console.log("FrontLeft was CLICKED motherforker")
+      this.zoneList.forEach(i => {
+        { if (i.description == "FrontRight" )
+         {
+          localStorage.setItem("zone",i.zone_id);
+         
+         }
+          
+        }});
+        console.log(this.zoneList)
+    }
+    if(value=="BackLeft"){
+      console.log("FrontLeft was CLICKED motherforker")
+      this.zoneList.forEach(i => {
+        { if (i.description == "BackLeft" )
+         {
+          localStorage.setItem("zone",i.zone_id);
+         
+         }
+          
+        }});
+        console.log(this.zoneList)
+    }
+    if(value=="BackRight"){
+      console.log("FrontLeft was CLICKED motherforker")
+      this.zoneList.forEach(i => {
+        { if (i.description == "BackLeft" )
+         {
+          localStorage.setItem("zone",i.zone_id);
+         
+         }
+          
+        }});
+        console.log(this.zoneList)
+    }
+    /*else{
+      console.log("Something went wrong none of the params matched!!! it do be broken man ")
+    }*/
+
+    console.log(localStorage.getItem('zone'), " <- the ID of the zone that was assigned")
   }
 }

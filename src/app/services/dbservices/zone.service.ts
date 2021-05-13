@@ -17,12 +17,16 @@ export class ZoneService {
   }
 
   get(id: any): Observable<Zone> {
+
     return this.http.get(`${baseUrl}/${id}`);
   }
 
   create(data: any): Observable<any> {
     console.log("from frontend post: " + data);
     return this.http.post(baseUrl, data);
+  }
+  getClass(id: any): Observable<Zone[]> {
+    return this.http.get<Zone[]>(`${baseUrl}/classId/${id}`);
   }
 
   update(id: any, data: any): Observable<any> {

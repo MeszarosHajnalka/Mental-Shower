@@ -39,7 +39,7 @@
       
       <ion-row class="padding-side-25 padding-top-10">
         <ion-col>
-          <ion-button class="ion-button" id={{b1}} expand="block">
+          <ion-button class="ion-button"  (click)=" isakTest('FrontLeft')" expand="block">
             <div> 
               <span><p>Zone 1</p></span><br>
               <img src="assets\icon\groupeImage.png"/>
@@ -48,7 +48,7 @@
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="ion-button"  expand="block">
+          <ion-button class="ion-button" (click)=" isakTest('FrontRight')" expand="block">
             <div> 
               <span><p>Zone 2</p></span><br>
               <img src="assets\icon\groupeImage.png"/>
@@ -61,7 +61,7 @@
   
       <ion-row class="padding-side-25 padding-top-10">
         <ion-col>
-          <ion-button class="ion-button" value = 3 expand="block">
+          <ion-button class="ion-button" (click)=" isakTest('BackLeft')" value = 3 expand="block">
             <div> 
               <span><p>Zone 3</p></span><br>
               <img src="assets\icon\groupeImage.png"/>
@@ -70,7 +70,7 @@
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="ion-button" value = 4 routerLink="/tabs/favourites" expand="block">
+          <ion-button class="ion-button" (click)=" isakTest('BackRight')" value = 4 routerLink="/tabs/favourites" expand="block">
             <div> 
               <span><p>Zone 4</p></span><br>
               <img src="assets\icon\groupeImage.png"/>
