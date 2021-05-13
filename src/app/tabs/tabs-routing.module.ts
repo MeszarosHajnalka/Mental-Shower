@@ -24,6 +24,11 @@ const routes: Routes = [
         loadChildren: () => import('../group-page/group-page.module').then( m => m.GroupPagePageModule)
       },
       {
+        path: 'sign-in',
+        loadChildren: () =>
+          import('../pages/sign-in/sign-in.module').then((m) => m.SignInPageModule),
+      },
+      {
         path: '',
         redirectTo: '/tabs/how-do-you-feel',
         pathMatch: 'full'
