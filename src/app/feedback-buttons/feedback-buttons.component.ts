@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-feedback-buttons',
   templateUrl: './feedback-buttons.component.html',
@@ -13,8 +14,9 @@ export class FeedbackButtonsComponent implements OnInit {
    }
 
   ngOnInit() {
-  
   }
+
+  
 
   
 setPrefTimeOut(f){
