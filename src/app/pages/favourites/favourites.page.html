@@ -23,7 +23,7 @@
       <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">
       <ion-col>
         <ion-card>
-          <ion-item (click)="selectPreference(preference)">
+          <ion-item lines="none" (click)="selectPreference(preference)">
             <ion-button (click)="editPreference($event, preference)" color="success" fill="outline" slot="start">Edit</ion-button>
             <ion-label>{{preference.name}}</ion-label>
             <ion-button (click)="deletePreference($event, preference.id)" fill="clear" slot="end"><ion-icon name="trash-outline"></ion-icon></ion-button>
