@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/breathe/breathe.module').then( m => m.BreathePageModule)
       },
       {
+        path: 'survey',
+        loadChildren: () => import('../survey/survey.module').then( m => m.SurveyModule)
+      },
+      {
         path: 'group',
         loadChildren: () => import('../group-page/group-page.module').then( m => m.GroupPagePageModule)
       },

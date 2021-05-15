@@ -4,6 +4,11 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
+    path: 'survey',
+    loadChildren: () =>
+    import('./survey/survey.module').then((m) => m.SurveyModule),
+  },
+  {
     path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomePageModule),
