@@ -7,14 +7,21 @@
             <ion-back-button defaultHref="/how-do-you-feel"></ion-back-button>
           </ion-buttons>
         </ion-toolbar>
-    </ion-row>
-      <ion-row class="padding-top-50">
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <img
+            class="breathyIcon"
+            src="assets\icon\BreathyHeart.PNG"
+            size="25"
+          />
+        </ion-col>
+      </ion-row>
+      <ion-row class="padding-top-16">
         <ion-col>
           <ion-item lines="none">
-            <ion-avatar slot="start">
-              <img class="breathyIcon" src="assets\icon\BreathyHeart.PNG">
-            </ion-avatar>
-            <span><p class = "bolder">Why do you feel uncomfortable?</p></span><br>
+            <span><p class="bolder">Why do you feel uncomfortable?</p></span
+            ><br />
           </ion-item>
         </ion-col>
       </ion-row>
@@ -42,7 +49,7 @@
       <ion-row class="padding-side-25 padding-top-25">
         <ion-col>
           <ion-button (click)="buttonEvent('uncomfortable')" expand="block">
-            <p>I'm feeling uncomfortable </p>
+            <p>I'm feeling uncomfortable</p>
           </ion-button>
         </ion-col>
       </ion-row>

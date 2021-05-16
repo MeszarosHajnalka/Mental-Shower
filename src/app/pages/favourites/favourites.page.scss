@@ -2,14 +2,15 @@
   text-align: left;
 }
 
-// ion-card {
-//   display: flex;
-//   flex-direction: column;
-//   width: 110%;
-//   justify-content: center;
-//   color: aqua;
-//   left: -25px;
-// }
+ion-card {
+  margin-bottom:10px ;
+  display: flex;
+   flex-direction: column;
+  width: 110%;
+  //justify-content: center;
+   color: aqua;
+   left: -25px;
+ }
 
  ion-icon {
   display: flex;
