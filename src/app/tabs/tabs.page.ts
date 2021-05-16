@@ -9,7 +9,5 @@ export class TabsPage {
 
   constructor() {}
 
-  logout(){
-    sessionStorage.removeItem("currentUserToken")
-  }
+  
 }

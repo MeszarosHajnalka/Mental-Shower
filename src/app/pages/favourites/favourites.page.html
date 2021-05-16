@@ -12,13 +12,7 @@
     </ion-col>
   </ion-row >
   <ion-grid>
-    <div>
-      <ion-fab horizontal="end" slot="fixed">
-      <ion-fab-button [routerLink]="['/fan-speed']">
-        <ion-icon name="add"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-  </div>
+    
     <div *ngIf="preferences.length > 0; else noData">
       <ion-row class="padding-top-10" *ngFor="let preference of preferences; let i = index">
       <ion-col>
@@ -39,4 +33,12 @@
       </div>
     </ng-template>
   </ion-grid>
+  <div>
+    <ion-fab horizontal="center" slot="fixed">
+    <ion-fab-button [routerLink]="['/fan-speed']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  </div>
 </ion-content> 
+

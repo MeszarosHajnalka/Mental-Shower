@@ -20,7 +20,8 @@ export class BoardPage implements OnInit {
     private router: Router
   ) {
     this.route.queryParams.subscribe((params) => {
-      this.preferenceData = this.router.getCurrentNavigation().extras.state.preferenceData;
+      this.preferenceData =
+        this.router.getCurrentNavigation().extras.state.preferenceData;
     });
   }
 
