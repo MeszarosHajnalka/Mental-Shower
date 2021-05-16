@@ -29,7 +29,7 @@ export class BoardPage implements OnInit {
     if (!this.validateData()) return;
 
     const token = this.jwtService.getDecodedAccessToken(
-      localStorage.getItem('currentUserToken')
+      sessionStorage.getItem('currentUserToken')
     );
 
     let preference = {

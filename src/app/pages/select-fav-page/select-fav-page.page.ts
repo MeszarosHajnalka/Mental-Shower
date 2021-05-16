@@ -13,6 +13,10 @@ import { ZoneRecordService } from '../../services/dbservices/zone_record.service
   styleUrls: ['./select-fav-page.page.scss'],
 })
 export class SelectFavPagePage implements OnInit {
+
+  preferences: any = [];
+  zonePrefExists :boolean = true;
+
   constructor(
     private jwtService: JwtService,
     private alertController: AlertController,
@@ -20,12 +24,13 @@ export class SelectFavPagePage implements OnInit {
     private router: Router,
     private zoneRecordService: ZoneRecordService
   ) {
+    //this.fetchPreferences();
+  }
+
+  ngOnInit() {
     this.fetchPreferences();
     this.check();
   }
-
-  preferences: any = [];
-  zonePrefExists :boolean = true;
 
   fetchPreferences() {
     const token = this.jwtService.getDecodedAccessToken(
@@ -134,5 +139,4 @@ export class SelectFavPagePage implements OnInit {
   }
   }
   
-  ngOnInit() {}
 }

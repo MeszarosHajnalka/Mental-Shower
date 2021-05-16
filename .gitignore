@@ -31,3 +31,4 @@ npm-debug.log*
 /www
 /util
 src/app/util/constants.ts
+src/app/util/constants.ts
