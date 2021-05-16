@@ -1,6 +1,6 @@
 import { AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-how-do-you-feel',
@@ -8,19 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./how-do-you-feel.page.scss'],
 })
 export class HowDoYouFeelPage implements OnInit {
+  constructor(
+    private router: Router,
+    public alertController: AlertController
+  ) {}
 
-  constructor(public alertController: AlertController) { }
-
-  ngOnInit() {
+  logout() {
+    sessionStorage.removeItem('currentUserToken');
+    this.router.navigate(['sign-in']);
   }
 
-  async presentAlert(){
+  ngOnInit() {}
+
+  async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'alertClass',
       header: 'Breathy',
       subHeader: 'The study healper',
       message: 'Hi im Breathy, and here to service you!',
-      buttons: ['OK']
+      buttons: ['OK'],
     });
 
     await alert.present();
@@ -28,5 +34,4 @@ export class HowDoYouFeelPage implements OnInit {
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
-
 }

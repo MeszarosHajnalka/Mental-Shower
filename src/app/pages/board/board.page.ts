@@ -20,7 +20,8 @@ export class BoardPage implements OnInit {
     private router: Router
   ) {
     this.route.queryParams.subscribe((params) => {
-      this.preferenceData = this.router.getCurrentNavigation().extras.state.preferenceData;
+      this.preferenceData =
+        this.router.getCurrentNavigation().extras.state.preferenceData;
     });
   }
 
@@ -29,7 +30,7 @@ export class BoardPage implements OnInit {
     if (!this.validateData()) return;
 
     const token = this.jwtService.getDecodedAccessToken(
-      localStorage.getItem('currentUserToken')
+      sessionStorage.getItem('currentUserToken')
     );
 
     let preference = {
