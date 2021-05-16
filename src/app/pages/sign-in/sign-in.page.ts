@@ -10,7 +10,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./sign-in.page.scss'],
 })
 export class SignInPage implements OnInit {
-  username: String;
+  username: string;
   password: String;
   loading: boolean;
 
@@ -45,6 +45,8 @@ export class SignInPage implements OnInit {
           if (resp.status == 200 || resp.status == 204) {
             console.log(resp.body);
             sessionStorage.setItem('currentUserToken', resp.body['token']);
+            
+            sessionStorage.setItem('user',this.username)
             this.router.navigate(['/tabs/how-do-you-feel']);
           }
         },

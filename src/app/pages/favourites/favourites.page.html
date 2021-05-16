@@ -14,7 +14,7 @@
   <ion-grid>
     
     <div *ngIf="preferences.length > 0; else noData">
-      <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">
+      <ion-row class="padding-top-10" *ngFor="let preference of preferences; let i = index">
       <ion-col>
         <ion-card>
           <ion-item lines="none" (click)="selectPreference(preference)">
