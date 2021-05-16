@@ -1,12 +1,14 @@
 .btn{
-  border-radius: 50%;
+  border-radius: 20%;
+  //background-color: #4ad0d0;
 }
 
 .option{
-  background-color:#cadaee;
+  background-color:rgba(114, 211, 217, 0.1);
   font-size:20px;
   padding:10px;
   margin:3px;
+  border-radius: 15px;
 }
   #quiz .options input[type=checkbox] {
       height:22px;
@@ -18,9 +20,10 @@
 }
 
 .result-question{
-  background-color:#eee;
+  background-color: rgba(114, 211, 217, 0.1);
   margin:4px;
   padding:6px;
+  margin-bottom: 5%;
 }
 
 .surveyTitle{
