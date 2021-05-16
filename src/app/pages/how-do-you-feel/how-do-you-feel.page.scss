@@ -13,11 +13,17 @@ p {
 .padding-top-18 {
   text-align: left;
 }
+.some {
+  text-align: left;
+}
+.bolder {
+  font-weight: bolder;
+}
 
 ion-button {
   --background: rgba(114, 211, 217, 0.1);
   --border-radius: 20px;
-  height: 200px;
+  height: 30px;
 }
 
 ion-icon{

@@ -11,8 +11,9 @@ export class HowDoYouFeelPage implements OnInit {
   constructor(
     private router: Router,
     public alertController: AlertController
+    
   ) {}
-
+  public username: string = sessionStorage.getItem('user')
   logout() {
     sessionStorage.removeItem('currentUserToken');
     this.router.navigate(['sign-in']);
