@@ -30,6 +30,7 @@ export class GroupPagePage implements OnInit {
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected() { 
     console.log(this.roomSelected.class_id)
+    localStorage.setItem('class',this.roomSelected.class_id)
     //this.roomSelected.class_id
      this.zoneService.getClass(this.roomSelected.class_id)
      
@@ -109,7 +110,7 @@ export class GroupPagePage implements OnInit {
     if(value=="BackRight"){
       console.log("FrontLeft was CLICKED motherforker")
       this.zoneList.forEach(i => {
-        { if (i.description == "BackLeft" )
+        { if (i.description == "BackRight" )
          {
           localStorage.setItem("zone",i.zone_id);
          

@@ -16,8 +16,8 @@ export class ZoneRecordService {
     return this.http.get<ZoneRecord[]>(baseUrl);
   }
 
-  get(id: any): Observable<ZoneRecord> {
-    return this.http.get(`${baseUrl}/${id}`);
+  get(id: any): Observable<ZoneRecord[]> {
+    return this.http.get<ZoneRecord[]>(`${baseUrl}/${id}`);
   }
 
   create(data: any): Observable<any> {
