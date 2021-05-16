@@ -1,4 +1,6 @@
+import { AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-how-do-you-feel',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowDoYouFeelPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   ngOnInit() {
+  }
+
+  async presentAlert(){
+    const alert = await this.alertController.create({
+      cssClass: 'alertClass',
+      header: 'Breathy',
+      subHeader: 'The study healper',
+      message: 'Hi im Breathy, and here to service you!',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
 
 }
