@@ -110,7 +110,7 @@ export class GroupPagePage implements OnInit {
     if(value=="BackRight"){
       console.log("FrontLeft was CLICKED motherforker")
       this.zoneList.forEach(i => {
-        { if (i.description == "BackLeft" )
+        { if (i.description == "BackRight" )
          {
           localStorage.setItem("zone",i.zone_id);
          

@@ -21,9 +21,11 @@ export class SelectFavPagePage implements OnInit {
     private zoneRecordService: ZoneRecordService
   ) {
     this.fetchPreferences();
+    this.check();
   }
 
   preferences: any = [];
+  zonePrefExists :boolean = true;
 
   fetchPreferences() {
     const token = this.jwtService.getDecodedAccessToken(
@@ -35,7 +37,24 @@ export class SelectFavPagePage implements OnInit {
       .subscribe((data) => {
         this.preferences = data;
       });
+   
   }
+  check(){
+    const token = this.jwtService.getDecodedAccessToken(
+      sessionStorage.getItem('currentUserToken')
+    );
+    this.zoneRecordService.get(token['id'])
+    
+    .subscribe((data) => {
+      console.log(data)
+      if(data.length==0){
+        this.zonePrefExists=false;
+        console.log(this.zonePrefExists)
+      }
+      
+    });
+  }
+  
 
   deletePreference(e: Event, preferenceId) {
     e.stopPropagation();
@@ -63,6 +82,9 @@ export class SelectFavPagePage implements OnInit {
   }
 
   async selectPreference(preference) {
+    const token = this.jwtService.getDecodedAccessToken(
+      sessionStorage.getItem('currentUserToken')
+    );
     const alerty = await this.alertController.create({
       header: 'Success',
       message: 'Favourite selected',
@@ -73,10 +95,14 @@ export class SelectFavPagePage implements OnInit {
     const record={
       
       zone_id: localStorage.getItem('zone'),
-      user_pref_id: preference.id
+      user_pref_id: preference.id,
+      user_id:token['id']
       
     }
     console.log(record);
+    if(this.zonePrefExists==false){
+
+      console.log("ITS IN CREATE")
     this.zoneRecordService.create(record)
     .subscribe(
       response => {
@@ -90,5 +116,23 @@ export class SelectFavPagePage implements OnInit {
     let result = await alerty.onDidDismiss();
    this.router.navigate(['tabs/how-do-you-feel']);
   }
+  if (this.zonePrefExists==true) {
+    console.log("ITS IN UPFATE")
+    this.zoneRecordService.update(record.user_id,record)
+    .subscribe(
+      response => {
+        console.log(response);
+       
+      },
+      error => {
+        console.log(error);
+      })
+    await alerty.present();
+    let result = await alerty.onDidDismiss();
+   this.router.navigate(['tabs/how-do-you-feel']);
+    
+  }
+  }
+  
   ngOnInit() {}
 }
