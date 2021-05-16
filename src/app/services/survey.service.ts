@@ -12,10 +12,7 @@ export class SurveyService {
 
   getAll() {
     return [
-      { id: 'assets/surveydata/javascript.json', name: 'JavaScript' },
-      { id: 'assets/surveydata/aspnet.json', name: 'Asp.Net' },
-      { id: 'assets/surveydata/csharp.json', name: 'C Sharp' },
-      { id: 'assets/surveydata/designPatterns.json', name: 'Design Patterns' }
+      {id: 'assets/surveydata/saveEarth.json', name: 'Climate Survey'}
     ];
   }
 

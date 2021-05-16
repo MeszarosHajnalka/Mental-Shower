@@ -7,7 +7,7 @@ import { Option, Question, Quiz, QuizConfig } from '../services/models/surveymod
 @Component({
   selector: 'app-survey',
   templateUrl: './survey.component.html',
-  styleUrls: ['./survey.component.scss', './bootstrap.css'],
+  styleUrls: ['./bootstrap.css', './survey.component.scss'],
   providers: [SurveyService]
 })
 export class SurveyComponent implements OnInit {
@@ -18,8 +18,8 @@ export class SurveyComponent implements OnInit {
   config: QuizConfig = {
     'allowBack': true,
     'allowReview': true,
-    'autoMove': false,  // if true, it will move to next question automatically when answered.
-    'duration': 300,  // indicates the time (in secs) in which quiz needs to be completed. 0 means unlimited.
+    'autoMove': true,  // if true, it will move to next question automatically when answered.
+    'duration': 0,  // indicates the time (in secs) in which quiz needs to be completed. 0 means unlimited.
     'pageSize': 1,
     'requiredAll': false,  // indicates if you must answer all the questions before submitting.
     'richText': false,
@@ -61,12 +61,13 @@ export class SurveyComponent implements OnInit {
     this.mode = 'quiz';
   }
 
+  //if-sentence that runs onSubmit after time passed is outcommented.
   tick() {
     const now = new Date();
     const diff = (now.getTime() - this.startTime.getTime()) / 1000;
-    if (diff >= this.config.duration) {
+    /*if (diff >= this.config.duration) {
       this.onSubmit();
-    }
+    }*/
     this.ellapsedTime = this.parseTime(diff);
   }
 

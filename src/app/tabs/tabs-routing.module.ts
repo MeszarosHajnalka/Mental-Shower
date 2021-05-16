@@ -21,7 +21,8 @@ const routes: Routes = [
       },
       {
         path: 'survey',
-        loadChildren: () => import('../survey/survey.module').then( m => m.SurveyModule)
+        redirectTo: '/survey',
+        pathMatch: 'full'
       },
       {
         path: 'group',

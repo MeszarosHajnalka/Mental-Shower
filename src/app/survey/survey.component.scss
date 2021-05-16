@@ -1,5 +1,5 @@
 .btn{
-  border-radius: 0;
+  border-radius: 50%;
 }
 
 .option{
@@ -21,6 +21,23 @@
   background-color:#eee;
   margin:4px;
   padding:6px;
+}
+
+.surveyTitle{
+  font-size: 36px;
+}
+
+.surveyQuestion {
+  font-size: 25px;
+}
+
+.surveyPagination{
+  font-size: 15px;
+  color: black;
+}
+
+.surveySubmit {
+  margin-bottom: 5%;
 }
 
 @media only screen and (max-width: 480px) {
