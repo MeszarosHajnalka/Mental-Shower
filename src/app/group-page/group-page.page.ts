@@ -30,6 +30,7 @@ export class GroupPagePage implements OnInit {
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected() { 
     console.log(this.roomSelected.class_id)
+    localStorage.setItem('class',this.roomSelected.class_id)
     //this.roomSelected.class_id
      this.zoneService.getClass(this.roomSelected.class_id)
      

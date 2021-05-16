@@ -132,7 +132,11 @@ const routes: Routes = [
   {
     path: 'problems',
     loadChildren: () => import('./pages/problems/problems.module').then( m => m.ProblemsPageModule)
+  },  {
+    path: 'select-fav-page',
+    loadChildren: () => import('./pages/select-fav-page/select-fav-page.module').then( m => m.SelectFavPagePageModule)
   }
+
 
 ];
 

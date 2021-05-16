@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="padding-top-25">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/how-do-you-feel"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-row>
+  <ion-row class="padding-top-50">
+    <ion-col>
+        <strong>My favorites</strong>
+    </ion-col>
+  </ion-row >
+  <ion-grid>
+    <div>
+      <ion-fab horizontal="end" slot="fixed">
+      <ion-fab-button [routerLink]="['/fan-speed']">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+    <div *ngIf="preferences.length > 0; else noData">
+      <ion-row class="padding-top-20" *ngFor="let preference of preferences; let i = index">
+      <ion-col>
+        <ion-card>
+          <ion-item lines="none" (click)="selectPreference(preference)">
+            <ion-button (click)="editPreference($event, preference)" color="success" fill="outline" slot="start">Edit</ion-button>
+            <ion-label>{{preference.name}}</ion-label>
+              </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    </div>
+    <ng-template #noData>
+      <div class="noDataDiv">
+        <img class="img" src="assets/favourites.svg" alt="No preferences" />
+        <ion-label>No data</ion-label>
+      </div>
+    </ng-template>
+  </ion-grid>
+</ion-content> 
