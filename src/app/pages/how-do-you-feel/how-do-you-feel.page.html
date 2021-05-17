@@ -1,24 +1,25 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
-  <div id="log_out">
-    <ion-row >
-      <ion-col><p class="bolder">Hi, {{username}}</p></ion-col>
-    <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col><ion-button (click)="logout()" lines="none" class="some">
-        <div expand="block" >
-        <ion-icon name="log-out-outline" >Log out</ion-icon>
-        <ion-label><small>Logout</small></ion-label>
-      </div>
-     
-   
-    </ion-button></ion-col>
-    
-  </ion-row>
   
-  </div>
-
   <div id="container">
+    <div id="log_out">
+      <ion-row >
+        <ion-col><p class="bolder">Hi, {{username}}</p></ion-col>
+      <ion-col></ion-col>
+        
+        <ion-col><ion-button (click)="logout()" lines="none" class="some" expand="block">
+         
+          <ion-icon name="log-out-outline" >Log out</ion-icon>
+          <ion-label><small>Logout</small></ion-label>
+        
+       
+     
+      </ion-button></ion-col>
+      
+    </ion-row>
+    
+    </div>
+  
     <app-feedback-buttons></app-feedback-buttons>
     <app-dashboard></app-dashboard>
   </div>

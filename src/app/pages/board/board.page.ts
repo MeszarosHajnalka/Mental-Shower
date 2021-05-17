@@ -12,6 +12,7 @@ import { JwtService } from '../../util/jwtService';
 export class BoardPage implements OnInit {
   preferenceData: any;
   preferenceName: string;
+  inGroup = sessionStorage.getItem('inGroup');
 
   constructor(
     private jwtService: JwtService,
@@ -48,7 +49,13 @@ export class BoardPage implements OnInit {
       .subscribe(
         (resp) => {
           if (resp.status == 200 || resp.status == 201 || resp.status == 204) {
+           if(this.inGroup=='true'){
+            this.router.navigate(['/select-fav-page']);
+          }
+          else{
             this.router.navigate(['/tabs/favourites']);
+          }
+           
           }
         },
         (err) => {

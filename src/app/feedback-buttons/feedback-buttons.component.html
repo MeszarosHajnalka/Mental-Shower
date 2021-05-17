@@ -1,3 +1,19 @@
+<div *ngIf="!justSignIn">
+  <ion-grid>
+    <ion-row class="padding-top-50">
+  <ion-card  class="cardish" expand="block">
+    <div > 
+      <span><ion-label class="bolder">Welcome to Vent2Learn!</ion-label> <br>
+     <p>I am BREATHY, I am here to help you around! To get you started, I would advice joining a classroom.</p> 
+     <img  class="imgy"src="assets/bre.png"/>
+    </span>
+      
+    </div>
+  </ion-card>
+</ion-row>
+</ion-grid>
+</div>
+<div  *ngIf="justSignIn">
 <div *ngIf="show"  >
     <ion-grid>
       <ion-row class="padding-top-50">
@@ -58,11 +74,12 @@
 
 </ion-grid>
 </div>
-<div *ngIf="!show">
+<div >
   <ion-grid>
     <ion-row  class="padding-top-50">
       <ion-col>
-       <ion-card class="cardish" expand="block">
+       <ion-card *ngIf="!show" class="cardish" expand="block">
+       
          <p class="bolder">
           
          {{text}}
@@ -71,8 +88,18 @@
 
         </p>
       </ion-card>
+      <!--<ion-card *ngIf="!showRoomMes">
+        <div > 
+          <span><ion-label class="bolder">Welcome to Vent2Learn!</ion-label> <br>
+         <p>I am BREATHY, I am here to help you around! To get you started, I would advice joining a classroom.</p> 
+         
+        </span>
+          
+        </div>
+      </ion-card>-->
     </ion-col>
     </ion-row>
   </ion-grid>
   
+</div>
 </div>

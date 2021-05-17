@@ -2,8 +2,9 @@ import { ZoneRecord } from '../models/zonerecord.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Constants } from '../../util/constants';
 
-const baseUrl = 'http://localhost:8080/api/zone_record';
+const baseUrl = Constants.DOMAIN + 'zone_record';
 
 @Injectable({
   providedIn: 'root'

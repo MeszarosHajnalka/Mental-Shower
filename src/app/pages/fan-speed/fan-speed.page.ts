@@ -14,7 +14,7 @@ export class FanSpeedPage implements OnInit {
   airspeed: Number = 50;
 
   isUpdate: boolean = false;
-
+  
   preferenceToUpdate: object;
 
   constructor(
@@ -44,7 +44,9 @@ export class FanSpeedPage implements OnInit {
     // }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+   
+  }
 
   confirmSelection() {
     console.log(this.humidity, this.temperature, this.airspeed);
@@ -90,8 +92,10 @@ export class FanSpeedPage implements OnInit {
         preferenceData,
       },
     };
-
-    this.router.navigate(['board'], navigationData);
+      
+        this.router.navigate(['board'], navigationData);
+      
+   
   }
 
   validateSliderData() {
