@@ -29,17 +29,18 @@ export class GroupPagePage implements OnInit {
   }
   //just checking the values, and assigning the roomIsSelected so we can get the zoones to apear 😅
   roomWasSelected() { 
-    console.log(this.roomSelected.class_id)
+    //console.log(this.roomSelected.class_id)
     localStorage.setItem('class',this.roomSelected.class_id)
+    localStorage.setItem('className',this.roomSelected.classroomname)
     //this.roomSelected.class_id
      this.zoneService.getClass(this.roomSelected.class_id)
      
      .subscribe(       
       data => {
         this.zoneList = data;
-        console.log(this.zoneList, "kisttt");
+        //console.log(this.zoneList, "kisttt");
         //this.zoneListThisRoom = this.zoneListt
-        console.log(this.zoneList," this is the ZONELIST, "+  " <- the otherone ")
+        //console.log(this.zoneList," this is the ZONELIST, "+  " <- the otherone ")
       },
       error => {
         console.log(error);
@@ -77,6 +78,7 @@ export class GroupPagePage implements OnInit {
       { if (i.description == "FrontLeft" )
        {
         localStorage.setItem("zone",i.zone_id);
+        localStorage.setItem("zoneName",i.description);
        
        }
         
@@ -89,6 +91,7 @@ export class GroupPagePage implements OnInit {
         { if (i.description == "FrontRight" )
          {
           localStorage.setItem("zone",i.zone_id);
+          localStorage.setItem("zoneName",i.description);
          
          }
           
@@ -101,6 +104,7 @@ export class GroupPagePage implements OnInit {
         { if (i.description == "BackLeft" )
          {
           localStorage.setItem("zone",i.zone_id);
+          localStorage.setItem("zoneName",i.description);
          
          }
           
@@ -113,6 +117,7 @@ export class GroupPagePage implements OnInit {
         { if (i.description == "BackRight" )
          {
           localStorage.setItem("zone",i.zone_id);
+          localStorage.setItem("zoneName",i.description);
          
          }
           
