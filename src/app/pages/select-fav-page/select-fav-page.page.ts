@@ -30,7 +30,12 @@ export class SelectFavPagePage implements OnInit {
   ngOnInit() {
     this.fetchPreferences();
     this.check();
+    sessionStorage.setItem('inGroup', 'true')
   }
+  ngDoCheck() {
+    this.fetchPreferences();
+  }
+  
 
   fetchPreferences() {
     const token = this.jwtService.getDecodedAccessToken(
@@ -91,8 +96,8 @@ export class SelectFavPagePage implements OnInit {
       sessionStorage.getItem('currentUserToken')
     );
     const alerty = await this.alertController.create({
-      header: 'Success',
-      message: 'Favourite selected',
+      header: 'Awesome',
+      message: 'Your preference are now taken into consideration!',
       buttons: ['Great, bring me back!'],
     });
     localStorage.setItem('selectedPreference', preference.id);
@@ -134,6 +139,9 @@ export class SelectFavPagePage implements OnInit {
       })
     await alerty.present();
     let result = await alerty.onDidDismiss();
+    sessionStorage.setItem('inGroup', 'false')
+    sessionStorage.setItem('alreadyInAGroup','true')
+    console.log("in select and should be TRUE")
    this.router.navigate(['tabs/how-do-you-feel']);
     
   }

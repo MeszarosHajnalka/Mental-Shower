@@ -47,6 +47,7 @@ export class SignInPage implements OnInit {
             sessionStorage.setItem('currentUserToken', resp.body['token']);
             
             sessionStorage.setItem('user',this.username)
+            sessionStorage.setItem('alreadyInAGroup','false')
             this.router.navigate(['/tabs/how-do-you-feel']);
           }
         },

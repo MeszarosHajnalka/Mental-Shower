@@ -8,15 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackButtonsComponent implements OnInit {
   public show:boolean = true;
+  public showRoomMes:boolean;
+  public isUserIn:boolean
+  public justSignIn:boolean =true;
   public text:string;
   constructor() {
     
    }
 
-  ngOnInit() {
+  ngOnInit(){
+    
   }
-
-  public username: string = sessionStorage.getItem('user')
+  ngDoCheck() {this.checkIfUserInRoom()}
+    
+    
+  
+checkIfUserInRoom(){
+  if (sessionStorage.getItem('alreadyInAGroup') =='false') {
+    this.justSignIn=false;
+   
+  }
+  else{
+    
+    this.justSignIn=true;
+  }
+}
+  
 
   
 setPrefTimeOut(f){
@@ -25,7 +42,7 @@ setPrefTimeOut(f){
   setTimeout(() => {
     console.log('show');
     this.show = true;
-  }, 5000);
+  }, 2500);
   if(f=="good"){
     console.log("good was pressed")
     this.text=" Great, we will keep up with the good work!"

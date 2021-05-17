@@ -1,17 +1,26 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
-    <div id="log_out">
-      <ion-row style="align-items: center;">
-        <ion-col style="text-align: end;"
-          ><ion-button (click)="logout()" lines="none" class="some">
+    <div id="container">
+      <div id="log_out">
+        <ion-row class="padding-top-50">
+          <ion-col><p class="bolder">Hi, {{username}}</p></ion-col>
+          <ion-col></ion-col>
+
+          <ion-col
+            ><ion-button
+              (click)="logout()"
+              lines="none"
+              class="some"
+              expand="block"
+            >
             <div style="display: flex" expand="block">
-              <ion-icon style="padding-right: 5px;" name="log-out-outline">Log out</ion-icon>
+              <ion-icon name="log-out-outline">Log out</ion-icon>
               <ion-label><small>Logout</small></ion-label>
             </div>
-          </ion-button></ion-col>
-      </ion-row>
-    </div>
-    <div id="container">
+            </ion-button></ion-col
+          >
+        </ion-row>
+      </div>
       <app-feedback-buttons></app-feedback-buttons>
       <app-dashboard></app-dashboard>
     </div>

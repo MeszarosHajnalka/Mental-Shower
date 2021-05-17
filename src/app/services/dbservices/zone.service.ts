@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Zone } from '../models/zone.model';
+import { Constants } from '../../util/constants';
 
-const baseUrl = 'http://localhost:8080/api/zone';
+const baseUrl = Constants.DOMAIN + 'zone';
+
 
 @Injectable({
   providedIn: 'root'

@@ -1,14 +1,62 @@
-<div *ngIf="show">
+<div *ngIf="!justSignIn">
   <ion-grid>
-    <ion-row class="padding-top-60">
-      <ion-col>
-        <div>
-          <ion-col><p class="bolder">Hi {{username}}, how are you feeling?</p></ion-col>
-        </div>
-      </ion-col>
-    </ion-row>
+    <ion-row class="padding-top-10">
+  <ion-card  class="cardish" expand="block">
+    <div > 
+      <span><ion-label class="bolder">Welcome to Vent2Learn!</ion-label> <br>
+     <p>I am BREATHY, I am here to help you around! To get you started, I would advice joining a classroom.</p> 
+     <img  class="imgy"src="assets/bre.png"/>
+    </span>
+      
+    </div>
+  </ion-card>
+</ion-row>
+</ion-grid>
+</div>
+<div  *ngIf="justSignIn">
+<ion-row class="padding-side-25 padding-top-20">
+  <ion-col>
+    <ion-button class="ion-button-small" (click)="setPrefTimeOut('good')" expand="block">
+      <div> 
+        <span><ion-label> Good</ion-label></span><br>
+        <img  class="img-icon"src="assets/checkmark-circle-outline.svg"/>
+      </div>
+    
+     
+    </ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button class="ion-button-small" (click)="setPrefTimeOut('cold')" expand="block">
+      <div> 
+        <span><ion-label>Cold</ion-label></span><br>
+        <img  class="img-icon"src="assets/snow-outline.svg"/>
+      </div>
+    </ion-button>
+  </ion-col>
+</ion-row>
+  <ion-row class="padding-side-25 padding-top-20">
+  <ion-col>
+  
+    <ion-button class="ion-button-small" (click)="setPrefTimeOut('warm')" expand="block">
+      <div> 
+        <span><ion-label>Warm</ion-label></span><br>
+        <img  class="img-icon"src="assets/sun-outline.svg"/>
+      </div>
+    </ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button class="ion-button-small" [routerLink]="['/problems']" expand="block">
+      <div> 
+        <span><ion-label>Uncomfy</ion-label></span><br>
+        <img  class="img-icon"src="assets/person-delete-outline.svg"/>
+      </div>
+   
+      
+    </ion-button>
+  </ion-col>
+</ion-row>
 
-    <ion-row class="padding-side-25 padding-top-20">
+    <!-- <ion-row class="padding-side-25 padding-top-20">
       <ion-col>
         <ion-button
           class="ion-button-small"
@@ -64,20 +112,31 @@
         </ion-button>
       </ion-col>
     </ion-row>
-  </ion-grid>
 </div>
-<div *ngIf="!show">
+<div >
   <ion-grid>
     <ion-row class="padding-top-50">
       <ion-col>
-        <ion-card class="cardish" expand="block">
-          <p class="bolder">
-            {{ text }}
-            <br />
-            <img class="imgy" src="assets/bre.png" />
-          </p>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+       <ion-card *ngIf="!show" class="cardish" expand="block">
+       
+         <p class="bolder">
+          
+         {{text}}
+          <br>
+          <img  class="imgy"src="assets/bre.png"/>
+
+        </p>
+      </ion-card>
+     <ion-card *ngIf="!showRoomMes">
+        <div > 
+          <span><ion-label class="bolder">Welcome to Vent2Learn!</ion-label> <br>
+         <p>I am BREATHY, I am here to help you around! To get you started, I would advice joining a classroom.</p> 
+         
+        </span>
+          
+        </div>
+      </ion-card>-->
+    <!-- </ion-col>
+    </ion-row> --> 
+  <!-- </ion-grid>
+</div> -->

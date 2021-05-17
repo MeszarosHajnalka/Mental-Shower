@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Classroom } from '../models/classroom.model';
+import { Constants } from '../../util/constants';
 
-const baseUrl = 'http://localhost:8080/api/classroom';
+const baseUrl = Constants.DOMAIN + 'classroom';
 
 @Injectable({
   providedIn: 'root'

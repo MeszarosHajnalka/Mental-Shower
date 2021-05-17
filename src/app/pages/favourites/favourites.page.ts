@@ -17,9 +17,11 @@ export class FavouritesPage implements OnInit {
     private httpClient: HttpClient,
     private router: Router
   ) {
+    
+  }
+  ngOnInit() {
     this.fetchPreferences();
   }
-
   preferences: any = [];
 
   fetchPreferences() {
@@ -71,5 +73,5 @@ export class FavouritesPage implements OnInit {
     let result = await alerty.onDidDismiss();
     this.router.navigate(['tabs/how-do-you-feel']);
   }
-  ngOnInit() {}
+ 
 }
