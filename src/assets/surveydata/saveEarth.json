@@ -5,7 +5,7 @@
     "questions": [
         {   
             "id": 1010,
-            "name": "Vent2Learn uses less power a year, than traditional ventilation systems.</br> How much less?",
+            "name": "Vent2Learn uses less power a year, than traditional ventilation systems. How much less?",
             "questionTypeId": 1,
             "options": [
                 {
