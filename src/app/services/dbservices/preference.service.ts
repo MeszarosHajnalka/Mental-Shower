@@ -1,30 +1,24 @@
-import { ZoneRecord } from '../models/zonerecord.model';
+import { Preference } from './../models/preference.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Constants } from '../../util/constants';
 
-const baseUrl = Constants.DOMAIN + 'zone_record';
+const baseUrl = 'http://localhost:8080/api/preference';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ZoneRecordService {
+export class PreferenceService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<ZoneRecord[]> {
-    return this.http.get<ZoneRecord[]>(baseUrl);
+  getAll(): Observable<Preference[]> {
+    return this.http.get<Preference[]>(baseUrl);
   }
 
-  get(id: any): Observable<ZoneRecord[]> {
-    return this.http.get<ZoneRecord[]>(`${baseUrl}/${id}`);
+  get(id: any): Observable<Preference> {
+    return this.http.get(`${baseUrl}/pk/${id}`);
   }
-
-  getByZone(id: any): Observable<ZoneRecord[]> {
-    return this.http.get<ZoneRecord[]>(`${baseUrl}/c/${id}`);
-  }
-
   
 
   create(data: any): Observable<any> {
