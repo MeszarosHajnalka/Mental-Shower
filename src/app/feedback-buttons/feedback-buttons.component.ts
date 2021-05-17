@@ -16,7 +16,7 @@ export class FeedbackButtonsComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  public username: string = sessionStorage.getItem('user')
 
   
 setPrefTimeOut(f){

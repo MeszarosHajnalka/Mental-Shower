@@ -1,5 +1,6 @@
 .btn{
   border-radius: 20%;
+  color:#72d3d9;
   //background-color: #4ad0d0;
 }
 
@@ -9,7 +10,13 @@
   padding:10px;
   margin:3px;
   border-radius: 15px;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: -10px;
 }
+
+
   #quiz .options input[type=checkbox] {
       height:22px;
       width:22px;
@@ -26,21 +33,20 @@
   margin-bottom: 5%;
 }
 
-.surveyTitle{
-  font-size: 36px;
-}
+// .surveyTitle{
+//   font-size: 36px;
+// }
 
 .surveyQuestion {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .surveyPagination{
-  font-size: 15px;
   color: black;
 }
 
 .surveySubmit {
-  margin-bottom: 5%;
+  margin-bottom: 40%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -51,10 +57,13 @@
       font-size:20px;
   }
   h3,.h3{
-      font-size:18px;
+      font-size:10px;
+      padding:45px;
+      padding-bottom: 30px;
   }
   .option {
       font-size: 16px;
       padding: 6px;
   }
 }
+
