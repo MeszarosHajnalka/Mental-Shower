@@ -13,12 +13,22 @@
             <strong>How do you prefer your indoor climate?</strong>
         </ion-col>
       </ion-row>
-      <ion-row class="padding-top-50">
+      <ion-col >
+        <small class="padding-top-25" >Tempeture</small>
+    </ion-col>
+    <ion-row>
+      <ion-col> 
+      <ion-icon class={{typeStyleT1}} src="assets/thermometer.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleT2}} src="assets/thermometer.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleT3}} src="assets/thermometer.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleT4}} src="assets/thermometer.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleT5}} src="assets/thermometer.svg"></ion-icon></ion-col>
+     
+    </ion-row>
+      <ion-row class="padding-top-12">
+     
         <ion-col>
-          <ion-col>
-            <small>Temperature</small>
-        </ion-col>
-          <ion-range [(ngModel)]="temperature" color="success" value="50">
+          <ion-range [(ngModel)]="temperature" (ionChange)="valueChangeTemp()" class="ion-range" value="50" snaps>
             <ion-label slot="start">cold</ion-label>
             <ion-label slot="end">hot</ion-label>
           </ion-range>
@@ -27,9 +37,19 @@
       <ion-col>
         <small>Humidity</small>
     </ion-col>
+    <ion-row>
+      <ion-col> 
+      <ion-icon class={{typeStyleD1}} src="assets/drop.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleD2}} src="assets/drop.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleD3}} src="assets/drop.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleD4}} src="assets/drop.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyleD5}} src="assets/drop.svg"></ion-icon></ion-col>
+     
+    </ion-row>
       <ion-row class="padding-top-12">
+        
         <ion-col>
-          <ion-range [(ngModel)]="humidity" color="primary" value="50">
+          <ion-range [(ngModel)]="humidity" class="ion-range-hum" (ionChange)="valueChangeHum()"value="50">
             <ion-label slot="start">dry</ion-label>
             <ion-label slot="end">humid</ion-label>
           </ion-range>
@@ -38,9 +58,19 @@
       <ion-col>
         <small>Airspeed</small>
     </ion-col>
+    <ion-row>
+      <ion-col> 
+      <ion-icon class={{typeStyle1}} src="assets/ac.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyle2}} src="assets/ac.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyle3}} src="assets/ac.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyle4}} src="assets/ac.svg"></ion-icon></ion-col>
+      <ion-col> <ion-icon class={{typeStyle5}} src="assets/ac.svg"></ion-icon></ion-col>
+     
+    </ion-row>
       <ion-row class="padding-top-12">
+     
         <ion-col>
-          <ion-range [(ngModel)]="airspeed" color="danger" value="50">
+          <ion-range [(ngModel)]="airspeed" (ionChange)="valueChange()" class="ion-range-air" value="50" snaps>
             <ion-label slot="start">fast</ion-label>
             <ion-label slot="end">slow</ion-label>
           </ion-range>
