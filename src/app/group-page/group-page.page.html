@@ -1,12 +1,5 @@
 
 <ion-content>
-  <ion-row class="padding-top-25">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/how-do-you-feel"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-</ion-row>
   <ion-card>
   
     <h3 class="bolder">
@@ -19,7 +12,7 @@
     </p>
 
   <div class="classMenu">
-  <ion-item lines="none" class="classMenu">
+  <ion-item class="classMenu">
     <ion-label>Choose Classroom</ion-label>
     <ion-icon name="arrow-dropdown"></ion-icon>
   <ion-select interface="popover" [(ngModel)]="roomSelected" (ngModelChange)="roomWasSelected()">
@@ -31,6 +24,8 @@
 </div >
 <div   *ngIf="!roomIsSelected">
   <p class="padding-top-b">
+    
+    Here we can give quick instructions or put a nice pic, IDK so its not empty.
   </p>
   <img src="assets\icon\groupeImage.png"/>
   </div>
