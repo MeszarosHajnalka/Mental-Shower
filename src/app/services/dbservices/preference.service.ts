@@ -2,8 +2,9 @@ import { Preference } from './../models/preference.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Constants } from '../../util/constants';
 
-const baseUrl = 'http://localhost:8080/api/preference';
+const baseUrl = Constants.DOMAIN +'preference';
 
 @Injectable({
   providedIn: 'root'

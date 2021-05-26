@@ -2,7 +2,7 @@
   <ion-grid>
     <ion-row class="padding-top-10">
   <ion-card  class="cardish" expand="block">
-    <div > 
+    <div [routerLink]="['/tabs/group']"> 
       <span><ion-label class="bolder">Welcome to Vent2Learn!</ion-label> <br>
      <p>I am BREATHY, I am here to help you around! To get you started, I would advice joining a classroom.</p> 
      <img  class="imgy"src="assets/bre.png"/>
@@ -16,7 +16,7 @@
 <div  *ngIf="justSignIn">
 <div *ngIf="show"  >
     <ion-grid>
-      <ion-row class="padding-top-50">
+      <ion-row >
         <ion-col>
           <div > 
             <ion-item lines="none">

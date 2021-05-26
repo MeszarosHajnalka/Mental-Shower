@@ -107,10 +107,10 @@ export class SelectFavPagePage implements OnInit {
     this.zoneRecordService.get(token['id'])
     
     .subscribe((data) => {
-      console.log(data)
+      //console.log(data)
       if(data.length==0){
         this.zonePrefExists=false;
-        console.log(this.zonePrefExists)
+        //console.log(this.zonePrefExists)
       }
       
     });
@@ -160,7 +160,7 @@ export class SelectFavPagePage implements OnInit {
       user_id:token['id']
       
     }
-    console.log(record);
+    //console.log(record);
     if(this.zonePrefExists==false){
 
       //console.log("ITS IN CREATE")
@@ -193,7 +193,7 @@ export class SelectFavPagePage implements OnInit {
     let result = await alerty.onDidDismiss();
     sessionStorage.setItem('inGroup', 'false')
     sessionStorage.setItem('alreadyInAGroup','true')
-    console.log("in select and should be TRUE")
+    //console.log("in select and should be TRUE")
     await this.calcZone(record.zone_id);
    this.router.navigate(['tabs/how-do-you-feel']);
     

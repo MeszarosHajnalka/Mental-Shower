@@ -1,6 +1,42 @@
 strong {
-    color: #000000;
-  }
+  color: #000000;
+}
+ 
+p {
+  color: #000000;
+}
+ 
+ion-label {
+  color: #000000;
+ // padding-bottom: 1000px;
+}
+  h2 {
+  color: #000000;
+}
+ 
+.padding-top-35 {
+  text-align: left;
+}
+ 
+.padding-top-18 {
+  text-align: left;
+}
+ 
+.ion-button {
+  --background: rgba(114, 211, 217, 0.1);
+  --border-radius: 15px;
+ 
+  height: 150px;
+}
+ion-card {
+  background: rgba(114, 211, 217, 0.1);
+  border-radius: 15px;
+ // padding: -110;
+ margin-right: -20px;
+margin-left: -20px;
+ height: 200;
+ 
+ 
   
   p {
     color: #3F3D56;
@@ -53,7 +89,7 @@ strong {
  // min-width: 10em;
   height: 70px;
 }
-
+ 
 img {
   width: 30px;
 }
@@ -61,7 +97,7 @@ img {
   width: 90px;
 }
 .img-icon{ width: 25px;
-
+ 
 }
 ion-icon {
   color: #000000;
@@ -74,18 +110,4 @@ ion-icon {
 .bolder {
   font-weight: bolder;
 }
-
-.typewriter {
-color: #fff;
-overflow: hidden; /* Ensures the content is not revealed until the animation */
-white-space: nowrap; /* Keeps the content on a single line */
-margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-animation: 
-  typing 3.5s steps(30, end),
-}
-
-/* The typing effect */
-@keyframes typing {
-from { width: 0 }
-to { width: 100% }
-}
+ 

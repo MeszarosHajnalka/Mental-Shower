@@ -61,7 +61,7 @@ export class GroupPagePage implements OnInit {
       .subscribe(
         data => {
           this.classroomList = data;
-          console.log(this.classroomList)
+          //console.log(this.classroomList)
           
         },
         error => {
@@ -73,7 +73,7 @@ export class GroupPagePage implements OnInit {
 
   isakTest(value) {
     if(value=='FrontLeft'){
-      console.log("FrontLeft was CLICKED motherforker")
+      //console.log("FrontLeft was CLICKED motherforker")
      this.zoneList.forEach(i => {
       { if (i.description == "FrontLeft" )
        {
@@ -83,10 +83,10 @@ export class GroupPagePage implements OnInit {
        }
         
       }});
-      console.log(this.zoneList)
+      //console.log(this.zoneList)
     }
     if(value=="FrontRight"){
-      console.log("FrontLeft was CLICKED motherforker")
+      //console.log("FrontLeft was CLICKED motherforker")
       this.zoneList.forEach(i => {
         { if (i.description == "FrontRight" )
          {
@@ -96,10 +96,10 @@ export class GroupPagePage implements OnInit {
          }
           
         }});
-        console.log(this.zoneList)
+        //console.log(this.zoneList)
     }
     if(value=="BackLeft"){
-      console.log("FrontLeft was CLICKED motherforker")
+      //console.log("FrontLeft was CLICKED motherforker")
       this.zoneList.forEach(i => {
         { if (i.description == "BackLeft" )
          {
@@ -109,10 +109,10 @@ export class GroupPagePage implements OnInit {
          }
           
         }});
-        console.log(this.zoneList)
+        //console.log(this.zoneList)
     }
     if(value=="BackRight"){
-      console.log("FrontLeft was CLICKED motherforker")
+      //console.log("FrontLeft was CLICKED motherforker")
       this.zoneList.forEach(i => {
         { if (i.description == "BackRight" )
          {
@@ -122,12 +122,12 @@ export class GroupPagePage implements OnInit {
          }
           
         }});
-        console.log(this.zoneList)
+        //console.log(this.zoneList)
     }
     /*else{
       console.log("Something went wrong none of the params matched!!! it do be broken man ")
     }*/
 
-    console.log(localStorage.getItem('zone'), " <- the ID of the zone that was assigned")
+    //console.log(localStorage.getItem('zone'), " <- the ID of the zone that was assigned")
   }
 }

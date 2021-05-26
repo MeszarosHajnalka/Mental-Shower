@@ -27,7 +27,7 @@ export class BoardPage implements OnInit {
   }
 
   savePreference() {
-    console.log('pref');
+    //console.log('pref');
     if (!this.validateData()) return;
 
     const token = this.jwtService.getDecodedAccessToken(
@@ -53,6 +53,7 @@ export class BoardPage implements OnInit {
             this.router.navigate(['/select-fav-page']);
           }
           else{
+            //console.log(preference);
             this.router.navigate(['/tabs/favourites']);
           }
            

@@ -43,7 +43,7 @@ export class SignInPage implements OnInit {
         (resp) => {
           this.loading = false;
           if (resp.status == 200 || resp.status == 204) {
-            console.log(resp.body);
+            //console.log(resp.body);
             sessionStorage.setItem('currentUserToken', resp.body['token']);
             
             sessionStorage.setItem('user',this.username)

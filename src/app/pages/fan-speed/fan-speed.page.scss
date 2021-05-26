@@ -1,0 +1,77 @@
+.ion-range{
+    --bar-background: linear-gradient(90deg, blue 10%,  rgb(120, 110, 255) 40%, rgb(170, 65, 255) 60%, rgba(227,3,3,1) 100%);
+    --bar-height: 5px;
+    // --bar-background: linear-gradient(90deg, rgba(227,3,3,1) 0%, rgba(240,177,28,1) 20%, rgba(244,235,44,1) 30%, rgba(76,238,57,1) 50%, rgba(40,246,251,1) 70%, rgba(11,124,221,1) 100%);
+    --knob-size: 30px;
+    //--knob-background:#0011ff;
+    --bar-background-active: none;
+}
+.ion-range-air{
+    --bar-background: linear-gradient(90deg, rgba(227,3,3,1) 10%,  rgb(170, 65, 255) 40%, rgb(120, 110, 255) 60%, blue 100%);
+    --bar-height: 5px;
+    // --bar-background: linear-gradient(90deg, rgba(227,3,3,1) 0%, rgba(240,177,28,1) 20%, rgba(244,235,44,1) 30%, rgba(76,238,57,1) 50%, rgba(40,246,251,1) 70%, rgba(11,124,221,1) 100%);
+    --knob-size: 30px;
+    //--knob-background:#0011ff;
+    --bar-background-active: none;
+}
+.ion-range-hum{
+    --bar-background: linear-gradient(90deg, rgb(107, 185, 253) 10%, rgb(12, 0, 180) 100%);
+    --bar-height: 5px;
+    // --bar-background: linear-gradient(90deg, rgba(227,3,3,1) 0%, rgba(240,177,28,1) 20%, rgba(244,235,44,1) 30%, rgba(76,238,57,1) 50%, rgba(40,246,251,1) 70%, rgba(11,124,221,1) 100%);
+    --knob-size: 30px;
+    //--knob-background:#0011ff;
+    --bar-background-active: none;
+}
+.ion-range-3{
+    @extend .ion-range;
+    --knob-background:#0b7cdd;
+}
+.imgy{
+    width: 20px;
+    
+  }
+  .icon {
+   // background: green;
+   color: rgb(1,1,100);
+   width: 20px;
+ }
+ 
+  ion-icon {
+    width: 20px;
+  
+    &.red {
+      color: red;
+      width: 20px;
+    }
+    &.blue {
+        color: blue;
+        width: 20px;
+      }
+    &.purple {
+        color: purple;
+        width: 20px;
+      }
+      &.plum {
+        color: plum;
+        width: 20px;
+      }
+      &.lightblue-2 {
+        color: rgb(55, 182, 255);
+        width: 20px;
+      }&.gray {
+        color: rgb(189, 189, 189);
+        width: 20px;
+      }
+      &.lightblue-1 {
+        color: rgb(104, 191, 241);
+        width: 20px;
+      }
+      &.blue2 {
+        color: rgb(47, 116, 245);
+        width: 20px;
+      }
+      &.blue3 {
+        color: rgb(8, 77, 204);
+        width: 20px;
+      }
+}

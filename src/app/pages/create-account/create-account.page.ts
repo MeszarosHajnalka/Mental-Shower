@@ -61,7 +61,7 @@ export class CreateAccountPage implements OnInit {
 
     await alert.present();
     let result = await alert.onDidDismiss();
-    console.log(result);
+    //console.log(result);
   }
 
   async handleCreation() {

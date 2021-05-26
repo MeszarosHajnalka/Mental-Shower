@@ -11,7 +11,7 @@
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "15%",
+                    "name": "47%",
                     "isAnswer": false
                 },
                 {
@@ -23,7 +23,7 @@
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "1%",
+                    "name": "15%",
                     "isAnswer": false
                 },
                 {
@@ -113,7 +113,7 @@
         },
         {
             "id": 1013,
-            "name": "You yourself can improve your CO2 level in your brain. How?",
+            "name": "You can improve your level of oxygen in your brain. How?",
             "questionTypeId": 1,
             "options": [
                 {
